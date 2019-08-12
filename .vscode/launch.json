@@ -1,0 +1,40 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - teste",
+      "request": "launch",
+      "mainClass": "com.marcioheleno.teste",
+      "projectName": "projeto-analise-algoritmos",
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - Main",
+      "request": "launch",
+      "mainClass": "com.marcioheleno.Main",
+      "projectName": "projeto-analise-algoritmos"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - Exercicio1",
+      "request": "launch",
+      "mainClass": "com.marcioheleno.Exercicio1",
+      "projectName": "projeto-analise-algoritmos"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - Exercicio1",
+      "request": "launch",
+      "mainClass": "com.marcioheleno.Exercicio1",
+      "projectName": "projeto-analise-algoritmos_4545da7f"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - Main",
+      "request": "launch",
+      "mainClass": "com.marcioheleno.Main",
+      "projectName": "projeto-analise-algoritmos_4545da7f"
+    }
+  ]
+}
