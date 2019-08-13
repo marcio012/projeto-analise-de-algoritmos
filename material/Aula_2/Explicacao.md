@@ -29,7 +29,7 @@ soma1(n)            Tempo   #vezes
     soma += i       c3      n
   return soma       c4      1
 ```  
-T
+T = tempo
 
 ```
 soma2(n) ==> n é tamanho da instancia
