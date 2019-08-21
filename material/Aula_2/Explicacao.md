@@ -36,3 +36,8 @@ soma2(n) ==> n é tamanho da instancia
   return (n+1) * n /2  => tempo c1 unidade de tempo == constante || #vezes == 1
 ```
 **T(n) => tempo de excução para uma instância de tamanho "n"**
+
+> O que devemos medir e o tempo computacional. 
+    
+    > Em geral o tempo gasto pelo algoritmo cresce com o tamanho da sua entrada.
+      

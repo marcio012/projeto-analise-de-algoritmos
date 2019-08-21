@@ -5,8 +5,18 @@
 
 > Divisão e Conquista:
 
+    > Consiste em desmembrar o problema em vários subproblemas que são semelhantes ao problema original, mas de menor tamanho, resolvendo os subproblemas recursivamente e depois combinam essas soluções com o objetivo de criar uma solução para o problema original.
+
 * Imagem:
 ![Foto 01!](img/IMG_3421.JPG "explicação da lousa")
+
+> O Paradigma de divisão e conquista envolve três passos em cada nível da recursão.
+
+* **Divisão:** do problema em determinado número de subproblema, que são as instancias menores do problema original.
+* **Conquista:** os subproblemas, resolvendo-os recursivamente. Porém, se os tamanhos dos subproblemas forem pequenos o bastante, basta resolver os subproblemas de maneira direta.
+* **Combinação:** as soluções dadas aos subproblemas na solução para o problema original.
+
+O algoritmo de ordenação 
 
 > Nota:
 Q(N): quantidade de recortes se resolve um problema de tamanho "N".
