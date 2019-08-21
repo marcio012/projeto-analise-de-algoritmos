@@ -16,7 +16,7 @@
 * **Conquista:** os subproblemas, resolvendo-os recursivamente. Porém, se os tamanhos dos subproblemas forem pequenos o bastante, basta resolver os subproblemas de maneira direta.
 * **Combinação:** as soluções dadas aos subproblemas na solução para o problema original.
 
-O algoritmo de ordenação 
+O algoritmo de ordenação
 
 > Nota:
 Q(N): quantidade de recortes se resolve um problema de tamanho "N".
@@ -97,6 +97,8 @@ Soma 2 Recursivo:
 | --- | --- | --- | --- |
 | 7   | 2   | 1   | 6   |
 |     |     |     |     |
+
+$T(N) = 2T (\frac{n}{2}) + \Theta(1)$
 
 $T(N) = 2T (\frac{n}{2}) + C$
 
