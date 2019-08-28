@@ -20,16 +20,19 @@ $Q(\frac{n}{4}) = 2 Q(\frac{n}8) + 1$
 
 > Tabela pra calcula:
 
-| nivel |      tamanho      | nivel |  tamanho  |
-| :---- | :---------------: | :---: | :-------: |
-| 0     |  $\frac{n}{2^0}$  |   1   |   $2ˆ0$   |
-| 1     |  $\frac{n}{2^1}$  |   1   |   $2ˆ1$   |
-| 2     |  $\frac{n}{2^2}$  |   1   |   $2ˆ2$   |
-| 3     |  $\frac{n}{2^3}$  |   1   |   $2ˆ3$   |
-| ****  |       ****        | ****  |   ****    |
-| ****  |       ****        | ****  |   ****    |
-| h-1   | $\frac{n}{2^h-1}$ |   1   | $2^(h-1)$ |
-| h     |  $\frac{n}{2^h}$  |   0   |    $0$    |
+| nivel |      tamanho      | custo nó  |    nivel    |            tamanho            |
+| :---- | :---------------: | :-------: | :---------: | :---------------------------: |
+| 0     |  $\frac{n}{2^0}$  |     c     |      1      |             $2^0$             |
+| 1     |  $\frac{n}{2^1}$  |     c     |      1      |             $2^1$             |
+| 2     |  $\frac{n}{2^2}$  |     c     |      1      |             $2^2$             |
+| 3     |  $\frac{n}{2^3}$  |     c     |      1      |             $2^3$             |
+| ****  |       ****        |   ****    |    ****     |             ****              |
+| ****  |       ****        |   ****    |    ****     |             ****              |
+| h-1   | $\frac{n}{2^h-1}$ |     c     |      1      |           $2^(h-1)$           |
+| h     |  $\frac{n}{2^h}$  | $2^h$ = n | $\Theta(1)$ | $\Theta(2^4)$ = $\Theta(2^n)$ |
+
+
+    O Valor de T(N) e o somatorio da coluna tamanho: //TODO: Formula no caderno
 
 
 > Teste de Algoritmos Interativos:
