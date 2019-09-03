@@ -59,9 +59,9 @@ public class Exercicio5 {
         }
 
         int a = soma2(vetor, i, m1-1);
-        int b = soma2(vetor, m1 + 1, m2 -1);
-        int c = soma2(vetor, m2 + 1, f);
-        System.out.println(a + b + c);
+        int b = soma2(vetor, m1 + i, m2 -1);
+        int c = soma2(vetor, m2+1, f);
+//        System.out.println(a + b + c);
         return a + b + c;
 
     }
