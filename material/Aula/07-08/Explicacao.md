@@ -18,10 +18,10 @@
 
 **Obs:** Tudo que for polinominal e d'veras bom.
 
-
 > Algoritmo de Soma:
 
 Somatório de 1 até n:
+
 ```
 soma1(n)            Tempo   #vezes
   soma= 0           c1      1
@@ -29,15 +29,16 @@ soma1(n)            Tempo   #vezes
     soma += i       c3      n
   return soma       c4      1
 ```
+
 T = tempo
 
 ```
 soma2(n) ==> n é tamanho da instancia
   return (n+1) * n /2  => tempo c1 unidade de tempo == constante || #vezes == 1
 ```
+
 **T(n) => tempo de excução para uma instância de tamanho "n"**
 
-> O que devemos medir e o tempo computacional. 
-    
+> O que devemos medir e o tempo computacional.
+
     > Em geral o tempo gasto pelo algoritmo cresce com o tamanho da sua entrada.
-      
