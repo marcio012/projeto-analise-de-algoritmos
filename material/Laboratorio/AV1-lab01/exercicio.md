@@ -229,4 +229,4 @@ tecnologia, hardware e tamanho do problema”. (20%)
 Sim isso e uma verdade, mas a complexidade se divide em espacial e temporal,
 pois.
 
-[voltar](./../../Indices.md)
+[voltar](../../../README.md)

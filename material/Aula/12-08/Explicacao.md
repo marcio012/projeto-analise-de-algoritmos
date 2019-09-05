@@ -178,4 +178,4 @@ $$= (c_1 + c_2 + c_4 + c_5 + c_8) n - (c_2 + c_4 + c_5 + c_6) $$
 | c7         |         0 |
 | c8         |   (n - 1) |
 
-[voltar](./../../Indices.md)
+[voltar](../../../README.md)

@@ -47,4 +47,4 @@ soma2(n) ==> n é tamanho da instancia
 
     > Em geral o tempo gasto pelo algoritmo cresce com o tamanho da sua entrada.
 
-[voltar](./../../Indices.md)
+[voltar](../../../README.md)

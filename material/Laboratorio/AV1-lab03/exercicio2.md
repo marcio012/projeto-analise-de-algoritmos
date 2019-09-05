@@ -42,3 +42,5 @@ static void metodo2 (int n) {
 ```
 
 **Passo 3**: Resolva a equação de recorrência por uma árvore de recursão. (15%)
+
+[voltar](../../../README.md)

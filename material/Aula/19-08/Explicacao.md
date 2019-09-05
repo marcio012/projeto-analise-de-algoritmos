@@ -125,4 +125,4 @@ Merge-Sorte(A, p, r)
   <!-- FIXME: ALGORITMO DO SLIDE -->
 ```
 
-[voltar](./../../Indices.md)
+[voltar](../../../README.md)
