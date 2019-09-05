@@ -1,5 +1,5 @@
 ## Analises de Algoritmos
-##### Univerdidade de Fortaleza - Unifor
+##### Universidade de Fortaleza - Unifor
 
 ##### Professor Napoleão
 
