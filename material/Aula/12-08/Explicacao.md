@@ -115,6 +115,9 @@ for i = 1 to n    tempo -> c1  | vezes -> n + 1
     print(j)      tempo -> c3 | vezes -> [(1 + n) * n) / 2]  ==> \Theta(n^n)
 ```
 
+**Obs:** formula da pafinita = $\frac{(a1 + an) * n}{2}$
+onde *a1* é o primeiro termo, *an* e o ultimo termo do array, *n* e o tamanho do array.
+
 Complexidade seria: T(n) = <!-- TODO: Estudar a peafinita --> => **quadratica** T(n) = $\Theta(n^2)$
 
 > Metódo 7 (N):
@@ -162,9 +165,7 @@ No caso do *INSERTION-SORT* o melhor caso ocorre se o arranjo já está ordenado
 $$T(n) = c_{1n} + c_2(n - 1) + c_4(n - 1) + c_5(n - 1) + c_8(n - 1)$$
 $$= (c_1 + c_2 + c_4 + c_5 + c_8) n - (c_2 + c_4 + c_5 + c_6) $$
 
-
 > Interações Melhor Caso:
-
 
 | Constantes | repetição |
 | :--------- | --------: |
@@ -176,6 +177,5 @@ $$= (c_1 + c_2 + c_4 + c_5 + c_8) n - (c_2 + c_4 + c_5 + c_6) $$
 | c6         |         0 |
 | c7         |         0 |
 | c8         |   (n - 1) |
-
 
 [voltar](./../../Indices.md)

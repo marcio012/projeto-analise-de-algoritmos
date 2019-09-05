@@ -7,7 +7,6 @@
 
     > Consiste em desmembrar o problema em vários subproblemas que são semelhantes ao problema original, mas de menor tamanho, resolvendo os subproblemas recursivamente e depois combinam essas soluções com o objetivo de criar uma solução para o problema original.
 
-* Imagem:
 ![Foto 01!](img/IMG_3421.JPG "explicação da lousa")
 
 > O Paradigma de divisão e conquista envolve três passos em cada nível da recursão.
@@ -125,3 +124,5 @@ Merge-Sorte(A, p, r)
   then q <- []
   <!-- FIXME: ALGORITMO DO SLIDE -->
 ```
+
+[voltar](./../../Indices.md)
