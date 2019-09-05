@@ -118,7 +118,7 @@ for i = 1 to n    tempo -> c1  | vezes -> n + 1
 **Obs:** formula da pafinita = $\frac{(a1 + an) * n}{2}$
 onde *a1* é o primeiro termo, *an* e o ultimo termo do array, *n* e o tamanho do array.
 
-Complexidade seria: T(n) = <!-- TODO: Estudar a peafinita --> => **quadratica** T(n) = $\Theta(n^2)$
+Complexidade seria: T(n) = $\frac{(2 + (n + 1)) * n}{2}$ => **quadratica** T(n) = $\Theta(n^2)$
 
 > Metódo 7 (N):
 
@@ -177,5 +177,20 @@ $$= (c_1 + c_2 + c_4 + c_5 + c_8) n - (c_2 + c_4 + c_5 + c_6) $$
 | c6         |         0 |
 | c7         |         0 |
 | c8         |   (n - 1) |
+
+> Ordem de crescimento
+
+Usando abstrações simplificadoras para facilitar a análise do procedimento *INSERTION-SORT*.
+
+1. ignoramos o custo real de cada instrução, as constantes $c_i$ para representar esses custos.
+2. ignoramos o custo abstratos $c_i$
+
+Ou seja é a **Taxa de Crescimento** ou **Ordem de Crescimento**, do tempo de execução que realmente nos interessa.
+
+No caso da ordenação por inserção, quando ignoramos os termos de ordem mais baixa e o coeficiente constante do termo inicial, resta apenas o fator de $n^2$ do termo inicial.
+
+Afirmamos que a ordenação por inserção tem um tempo de execução do pior caso igual a $\Theta(n^2)$
+
+Em geral um algoritmo e mais eficiente que outro se seu tempo de execurção do pior caso apresentar uma ordem de crescimento mais baixa.
 
 [voltar](../../../README.md)
