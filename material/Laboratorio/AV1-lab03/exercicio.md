@@ -290,3 +290,5 @@ Trata-se de uma função linear ou seja **O(n)**.
 Consiste essencialmente em movimentar elementos do vetor de um lugar para outro, sendo n o tamanho do vetor. O tempo de pecorer é proporcional ao número de movimentações. Portanto, o consumo de tempo da função é proporcional a n.  Assim, o algoritmo é linear.
 
 ---
+
+[voltar](../../../README.md)
