@@ -3,20 +3,24 @@
 
 ---
 
-> Eficiencia e performace:
+> Análise:
+
+Analisar um algoritmo significa prever os recursos de que o algoritmo necessita.
+
+> Fatores de eficiencia e performace:
 
 - Mémoria :
 - Banda Pasante:
 - Tempo de Processamento:
 
-> Influenciam:
+> Fatores de influenciam:
 
 - Linguagem:
 - Máquina:
 - Complexidade do Algoritmo:
 - Tamanho da Instância:
 
-**Obs:** Tudo que for polinominal e d'veras bom.
+<!-- **Obs:** Tudo que for polinominal e d'veras bom. -->
 
 > Algoritmo de Soma:
 
@@ -30,7 +34,7 @@ soma1(n)            Tempo   #vezes
   return soma       c4      1
 ```
 
-T = tempo
+unidade de médida T = tempo
 
 ```
 soma2(n) ==> n é tamanho da instancia
@@ -42,3 +46,6 @@ soma2(n) ==> n é tamanho da instancia
 > O que devemos medir e o tempo computacional.
 
     > Em geral o tempo gasto pelo algoritmo cresce com o tamanho da sua entrada.
+
+
+[voltar](./../../Indices.md)

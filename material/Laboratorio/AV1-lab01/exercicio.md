@@ -101,7 +101,7 @@ obrigatoriamente no laboratório. (20%)
 > Explicação:
 
 De acordo com o tamanho da instancia eleva-se o tempo isso eleva o aumento das interações do laço levando mais tempo de execurção isso conclui-se pois
-e uma função Quadrática **O(nˆ2)**
+e uma função Quadrática $O(nˆ2)$
 
 ---
 
@@ -157,10 +157,8 @@ Executar o código para n = 100.000 (métodos soma1 e soma2). Copiar abaixo a sa
 
 > Explicação :
 
-Ha uma diferença entre as duas implementações estar na complexidade dos
-algoritmos onde eles transformados em funções matematicas usam de uma funções
-quadratica e o outro em uma função logaritmica, ou seja um e **O(n^2)**,
-**O(log n)** e o outro e uma.
+Ha uma diferença entre as duas implementações estar na complexidade dos algoritmos onde eles transformados em funções matematicas usam de uma funções quadratica e o outro em uma função logaritmica, ou seja um e $O(n^2)$,
+$O(\log n)$ e o outro e uma.
 
 ---
 
@@ -217,7 +215,7 @@ laboratório. (20%)
 
 > Explicação :
 
-Trata-se de uma função constante ou seja **O(1)**.
+Trata-se de uma função constante ou seja $O(1)$.
 
 ---
 
@@ -230,3 +228,5 @@ tecnologia, hardware e tamanho do problema”. (20%)
 
 Sim isso e uma verdade, mas a complexidade se divide em espacial e temporal,
 pois.
+
+[voltar](./../../Indices.md)
