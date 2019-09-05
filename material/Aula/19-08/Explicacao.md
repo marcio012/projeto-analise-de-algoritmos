@@ -15,12 +15,19 @@
 * **Conquista:** os subproblemas, resolvendo-os recursivamente. Porém, se os tamanhos dos subproblemas forem pequenos o bastante, basta resolver os subproblemas de maneira direta.
 * **Combinação:** as soluções dadas aos subproblemas na solução para o problema original.
 
-O algoritmo de ordenação
+O algoritmo de **ordenação por intercalação** a seguir obedece rigorosamente ao paradigma de divião e conquista.
+
+**Modo de Funcionamento :**
+
+> **Divisão**: Divide a sequência de *n* elementos que deve ser ordenada em duas subsequências de $\frac{n}{2}$ elementos cada uma.
+> **Conquista**: Ordena as duas subsequências recursivamente, utilizando a ordenação por intercalação.
+> **Combinação**: Intercala as duas subsequências recursivamene, utilizando a ordenação por intercalação.
+> A recursão "extingue-se" quando sequências a ser ordenadas tiver comprimento 1.
+
+![Foto 02!](img/IMG_3422.JPG "explicação")
 
 > Nota:
-Q(N): quantidade de recortes se resolve um problema de tamanho "N".
-
-![Foto 02!](img/IMG_3422.JPG "explicação da lousa")
+> Q(N): quantidade de recortes se resolve um problema de tamanho "N".
 
 | Descrição | Quantidade |
 | --------- | ---------- |
@@ -32,7 +39,9 @@ Q(N): quantidade de recortes se resolve um problema de tamanho "N".
 
 * Função Recursiva:
 
-![Foto 03!](img/IMG_3423.JPG "explicação da lousa")
+> Em ciência da computação, a recursividade é a definição de uma sub-rotina (função ou método) que pode invocar a si mesma. Um exemplo de aplicação da recursividade pode ser encontrado nos analisadores sintáticos recursivos para linguagens de programação.
+
+![Foto 03!](img/IMG_3423.JPG "explicação")
 
 $Q(N) = 2Q (\frac{n}{2}) +1$ > Equação de Recorencia.
 
