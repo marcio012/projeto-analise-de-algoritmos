@@ -273,7 +273,7 @@ public class Exercicio1 {
 
 > InsertionSort para vetores de n elementos ordenados, de forma crescente ou seja melhor caso:
 
-$\Theta(n)$
+\(\Theta(n)\)
 
 > InsertionSort para vetores de n elementos ordenados, de forma decrescente ou seja melhor pior caso:
 
