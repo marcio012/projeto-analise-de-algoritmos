@@ -203,6 +203,10 @@ public class Exercicio1 {
 | 95   |    128    |   875 |
 | 100  |    136    |   928 |
 
+> Gráfico
+
+![Ordenando Crescente](./img/grafico_crescente.png)
+
 > Ordenado decrescente:
 
 | n    | insertion | merge |
@@ -229,6 +233,10 @@ public class Exercicio1 {
 | 95   |   6292    |   835 |
 | 100  |   6945    |   926 |
 
+> Gráfico
+
+![Ordenando Crescente](./img/grafico_decrescente.png)
+
 > Ordenado aleatório:
 
 | n    | insertion | merge |
@@ -254,6 +262,10 @@ public class Exercicio1 {
 | 90   |   2879    |   815 |
 | 95   |   3023    |   872 |
 | 100  |   3992    |   926 |
+
+> Gráfico
+
+![Ordenando Crescente](./img/grafico_aleatorio.png)
 
 ---
 
