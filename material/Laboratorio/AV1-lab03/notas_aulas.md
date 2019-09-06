@@ -35,7 +35,7 @@ Q(N): Quantidade de recortes para destacar N quadros
 
 > O Valor de T(N) e o somatorio da coluna tamanho: //TODO: Formula no caderno
 
-![Foto 02!](img/thumb_50.jpg "explicação da lousa")
+![Foto 02!](img/thumb_4c.jpg "explicação da lousa")
 
 > Teste de Algoritmos Interativos:
 

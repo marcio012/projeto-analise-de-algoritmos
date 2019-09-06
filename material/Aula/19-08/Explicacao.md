@@ -188,5 +188,7 @@ Soma 2 Recursivo:
 
 ```
 
+![Arvore de Recursão!](img/arvore_recursao.jpeg "arvore de recursão")
+
 [voltar](../../../README.md)
 
