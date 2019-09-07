@@ -1,6 +1,6 @@
 ## N584 – Projeto e Análise de Algoritmos
 ### Prof. Napoleão Nepomuceno
-#### AV1 - Lab03
+#### AV1 - Lab03 - exercicio 2
 ##### Data do Laboratório: 21/08/2019
 ##### Márcio Heleno **Matrícula: 1814038**
 
@@ -45,8 +45,10 @@ static void metodo2 (int n) {
 }
 ```
 
-$$T(n) = 4 * T(\frac{n}{2}) + c$$
+$$T(n) = 4 * T(\frac{n}{2}) + n$$
 
 **Passo 3**: Resolva a equação de recorrência por uma árvore de recursão. (15%)
+
+![Arvore de recursão](./img/arvore_de_recursao.png)
 
 [voltar](../../../README.md)

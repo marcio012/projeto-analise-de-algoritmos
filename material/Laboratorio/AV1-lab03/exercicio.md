@@ -265,7 +265,7 @@ public class Exercicio1 {
 
 > Gráfico
 
-![Ordenando Crescente](./img/grafico_aleatorio.png)
+
 
 ---
 
