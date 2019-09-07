@@ -101,7 +101,7 @@ obrigatoriamente no laboratório. (20%)
 > Explicação:
 
 De acordo com o tamanho da instancia eleva-se o tempo isso eleva o aumento das interações do laço levando mais tempo de execurção isso conclui-se pois
-e uma função Quadrática $O(nˆ2)$
+e uma função Quadrática O(n&sup2;)
 
 ---
 
