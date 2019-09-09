@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>exercicio.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+	font-size: 14px;
+	padding: 0 12px;
+	line-height: 22px;
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: #4080D0;
+	text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	font-size: inherit;
+	line-height: auto;
+}
+
+a:hover {
+	color: #4080D0;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left: 5px solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 14px;
+	line-height: 19px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+.mac code {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+.vscode-light,
+.vscode-light pre code {
+	color: rgb(30, 30, 30);
+}
+
+.vscode-dark,
+.vscode-dark pre code {
+	color: #DDD;
+}
+
+.vscode-high-contrast,
+.vscode-high-contrast pre code {
+	color: white;
+}
+
+.vscode-light code {
+	color: #A31515;
+}
+
+.vscode-dark code {
+	color: #D7BA7D;
+}
+
+.vscode-light pre:not(.hljs),
+.vscode-light code > div {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre:not(.hljs),
+.vscode-dark code > div {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre:not(.hljs),
+.vscode-high-contrast code > div {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.vscode-light blockquote,
+.vscode-dark blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.vscode-high-contrast blockquote {
+	background: transparent;
+	border-color: #fff;
+}
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family:  "Meiryo", "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+</head>
+<body>
+<h2 id="n584-%E2%80%93-projeto-e-an%C3%A1lise-de-algoritmos">N584 – Projeto e Análise de Algoritmos</h2>
+<h3 id="prof-napole%C3%A3o-nepomuceno">Prof. Napoleão Nepomuceno</h3>
+<h4 id="av1---lab01">AV1 - Lab01</h4>
+<h5 id="data-do-laborat%C3%B3rio-07082019">Data do Laboratório: 07/08/2019</h5>
+<blockquote>
+<p>Entrega do trabalho:
+Data da Entrega: 11/08/2019 (enviar arquivo.odt)</p>
+</blockquote>
+<h3 id="exerc%C3%ADcio-1">Exercício 1</h3>
+<ul>
+<li><strong>Passo 1</strong>: Implementar o seguinte código em
+Java ou equivalente em outra linguagem de
+programação.</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> java.util.Scanner;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Exercicio1</span> </span>{
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+		Scanner scanner = <span class="hljs-keyword">new</span> Scanner(System.in);
+		System.out.print(<span class="hljs-string">"Informe o valor de n: "</span>);
+		<span class="hljs-keyword">long</span> n = scanner.nextLong();
+		scanner.close();
+		soma1(n);
+		<span class="hljs-comment">//soma2(n);</span>
+		<span class="hljs-comment">//soma3(n);</span>
+	}
+
+	<span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">soma1</span> <span class="hljs-params">(<span class="hljs-keyword">long</span> n)</span> </span>{
+		System.out.println(<span class="hljs-string">"soma1"</span>);
+		System.out.printf(<span class="hljs-string">"%10s%20s%10s\n"</span>,<span class="hljs-string">"n"</span>, <span class="hljs-string">"solucao"</span>, <span class="hljs-string">"tempo"</span>);
+		<span class="hljs-keyword">double</span> inicio = System.currentTimeMillis();
+		<span class="hljs-keyword">long</span> soma = <span class="hljs-number">0</span>;
+		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">long</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) {
+			<span class="hljs-keyword">long</span> termo = <span class="hljs-number">0</span>;
+			<span class="hljs-keyword">for</span> (<span class="hljs-keyword">long</span> j = <span class="hljs-number">1</span>; j &lt;= i; j++) {
+				termo = termo + j;
+			}
+			soma = soma + termo;
+		}
+		<span class="hljs-keyword">double</span> fim = System.currentTimeMillis();
+		<span class="hljs-keyword">double</span> tempo = fim - inicio;
+		System.out.printf(<span class="hljs-string">"%10d%20d%10.0f\n"</span>, n, soma, tempo);
+	}
+
+	<span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">soma2</span> <span class="hljs-params">(<span class="hljs-keyword">long</span> n)</span> </span>{
+		System.out.println(<span class="hljs-string">"soma2"</span>);
+		System.out.printf(<span class="hljs-string">"%10s%20s%10s\n"</span>,<span class="hljs-string">"n"</span>, <span class="hljs-string">"solucao"</span>, <span class="hljs-string">"tempo"</span>);
+		<span class="hljs-keyword">double</span> inicio = System.currentTimeMillis();
+		<span class="hljs-keyword">long</span> soma = <span class="hljs-number">0</span>;
+		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">long</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) {
+			<span class="hljs-keyword">long</span> termo = ((<span class="hljs-number">1</span> + i) * i) / <span class="hljs-number">2</span>;
+			soma = soma + termo;
+		}
+		<span class="hljs-keyword">double</span> fim = System.currentTimeMillis();
+		<span class="hljs-keyword">double</span> tempo = fim - inicio;
+		System.out.printf(<span class="hljs-string">"%10d%20d%10.0f\n"</span>, n, soma, tempo);
+	}
+
+	<span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">soma3</span> <span class="hljs-params">(<span class="hljs-keyword">long</span> n)</span> </span>{
+		System.out.println(<span class="hljs-string">"soma3"</span>);
+		System.out.printf(<span class="hljs-string">"%10s%20s%10s\n"</span>,<span class="hljs-string">"n"</span>, <span class="hljs-string">"solucao"</span>, <span class="hljs-string">"tempo"</span>);
+		<span class="hljs-keyword">double</span> inicio = System.currentTimeMillis();
+		<span class="hljs-keyword">long</span> soma = n * (n+<span class="hljs-number">1</span>) * (n+<span class="hljs-number">2</span>) / <span class="hljs-number">6</span>;
+		<span class="hljs-keyword">double</span> fim = System.currentTimeMillis();
+		<span class="hljs-keyword">double</span> tempo = fim - inicio;
+		System.out.printf(<span class="hljs-string">"%10d%20d%10.0f\n"</span>, n, soma, tempo);
+	}
+
+}
+</div></code></pre>
+<hr>
+<ul>
+<li><strong>Passo 2:</strong> Executar o código para cada valor de
+n = 1.000, 10.000, 100.000 (método soma1).</li>
+</ul>
+<p>Para cada execução, copiar abaixo a saída do programa.
+Explicar porque o tempo de execução cresce à medida que
+o valor de n cresce. Obs.: este passo deve ser realizado
+obrigatoriamente no laboratório. (20%)</p>
+<blockquote>
+<p>Soma 1 instancia 1000:</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">n</th>
+<th style="text-align:center">solução</th>
+<th style="text-align:right">tempo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1000</td>
+<td style="text-align:center">167167000</td>
+<td style="text-align:right">12</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Soma 1 instancia 10.000:</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">n</th>
+<th style="text-align:center">solução</th>
+<th style="text-align:right">tempo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">10000</td>
+<td style="text-align:center">166716670000</td>
+<td style="text-align:right">32</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Soma 1 instancia 100.000:</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">n</th>
+<th style="text-align:center">solução</th>
+<th style="text-align:right">tempo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">100000</td>
+<td style="text-align:center">166671666700000</td>
+<td style="text-align:right">3353</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Explicação:</p>
+</blockquote>
+<p>De acordo com o tamanho da instancia eleva-se o tempo isso eleva o aumento das interações do laço levando mais tempo de execurção isso conclui-se pois
+e uma função Quadrática $O(nˆ2)$</p>
+<hr>
+<ul>
+<li><strong>Passo 3:</strong> Executar o código 3 vezes para o valor de n = 100.000 (método soma1).</li>
+</ul>
+<p>Para cada execução, copiar abaixo a saída do programa.
+Explicar porque o tempo de execução varia mesmo para valores iguais de n?
+Obs.: este passo deve ser realizado obrigatoriamente no laboratório. (20%)</p>
+<blockquote>
+<p>Soma 1 instancia 100.000 x 3:</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">n</th>
+<th style="text-align:center">solução</th>
+<th style="text-align:right">tempo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">100000</td>
+<td style="text-align:center">166671666700000</td>
+<td style="text-align:right">2484</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Soma 1 instancia 100.000 x 3:</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">n</th>
+<th style="text-align:center">solução</th>
+<th style="text-align:right">tempo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">100000</td>
+<td style="text-align:center">166671666700000</td>
+<td style="text-align:right">2524</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Soma 1 instancia 100.000 x 3:</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">n</th>
+<th style="text-align:center">solução</th>
+<th style="text-align:right">tempo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">100000</td>
+<td style="text-align:center">166671666700000</td>
+<td style="text-align:right">2608</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Explicação</p>
+</blockquote>
+<p>A única coisa que se altera e o tempo de processamento, como a máquina tem outros processos ela não dar uma constância no tempo de execurção, isso pode ser devido a muito fatores relacionando a maquina que estar sendo executado o algoritmo, pois ele pode ter varios processo sendo executados paralelamente.</p>
+<hr>
+<ul>
+<li><strong>Passo 4:</strong> Descomentar o método soma2.</li>
+</ul>
+<p>Executar o código para n = 100.000 (métodos soma1 e soma2). Copiar abaixo a saída do programa. Explicar porque o método soma2 possui tempo de execução inferior ao método soma1, embora o problema a ser resolvido, o tamanho da instância (valor de n), a máquina e a linguagem de programação sejam todos os mesmos? Obs.: este passo deve ser realizado obrigatoriamente no laboratório. (20%)</p>
+<blockquote>
+<p>Soma 1 e 2 instancia 1000 :</p>
+</blockquote>
+<ul>
+<li>soma 1:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">n</th>
+<th style="text-align:center">solução</th>
+<th style="text-align:right">tempo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">100000</td>
+<td style="text-align:center">166671666700000</td>
+<td style="text-align:right">4155</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>soma 2</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">n</th>
+<th style="text-align:center">solução</th>
+<th style="text-align:right">tempo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">100000</td>
+<td style="text-align:center">166671666700000</td>
+<td style="text-align:right">5</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<blockquote>
+<p>Explicação :</p>
+</blockquote>
+<p>Ha uma diferença entre as duas implementações estar na complexidade dos algoritmos onde eles transformados em funções matematicas usam de uma funções quadratica e o outro em uma função logaritmica, ou seja um e $O(n^2)$,
+$O(\log n)$ e o outro e uma.</p>
+<hr>
+<ul>
+<li><strong>Passo 5:</strong> Comentar o método soma1 e descomentar o método soma3.</li>
+</ul>
+<p>Executar o código para n = 100.000, 1.000.000, 10.000.000
+(métodos soma2 e soma3). Copiar abaixo a saída do programa.
+Explicar porque o tempo de execução do método soma3 não
+cresce embora o valor de n esteja crescendo? Obs.:
+este passo deve ser realizado obrigatoriamente no
+laboratório. (20%)</p>
+<blockquote>
+<p>Soma 2 e 3, instancia 100000:</p>
+</blockquote>
+<ul>
+<li>Soma 2</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">n</th>
+<th style="text-align:center">solução</th>
+<th style="text-align:right">tempo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">100000</td>
+<td style="text-align:center">166671666700000</td>
+<td style="text-align:right">6</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Soma 3</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">n</th>
+<th style="text-align:center">solução</th>
+<th style="text-align:right">tempo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">100000</td>
+<td style="text-align:center">166671666700000</td>
+<td style="text-align:right">0</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Soma instancia 1.000.000:</p>
+</blockquote>
+<ul>
+<li>Soma 2</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">n</th>
+<th style="text-align:center">solução</th>
+<th style="text-align:right">tempo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1000000</td>
+<td style="text-align:center">166671666700000</td>
+<td style="text-align:right">8</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Soma 3</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">n</th>
+<th style="text-align:center">solução</th>
+<th style="text-align:right">tempo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1000000</td>
+<td style="text-align:center">166671666700000</td>
+<td style="text-align:right">0</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Soma instancia 10.000.000:</p>
+</blockquote>
+<ul>
+<li>Soma 2</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">n</th>
+<th style="text-align:center">solução</th>
+<th style="text-align:right">tempo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">10000000</td>
+<td style="text-align:center">166671666700000</td>
+<td style="text-align:right">19</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Soma 3</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">n</th>
+<th style="text-align:center">solução</th>
+<th style="text-align:right">tempo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">10000000</td>
+<td style="text-align:center">166671666700000</td>
+<td style="text-align:right">0</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Explicação :</p>
+</blockquote>
+<p>Trata-se de uma função constante ou seja $O(1)$.</p>
+<hr>
+<ul>
+<li><strong>Passo 6:</strong> Comentar de forma crítica a seguinte afirmativa:</li>
+</ul>
+<p>“a complexidade de um algoritmo depende de diversos fatores como
+tecnologia, hardware e tamanho do problema”. (20%)</p>
+<blockquote>
+<p>Explicação :</p>
+</blockquote>
+<p>Sim isso e uma verdade, mas a complexidade se divide em espacial e temporal,
+pois.</p>
+<p><a href="../../../README.md">voltar</a></p>
+
+</body>
+</html>

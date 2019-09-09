@@ -12,28 +12,30 @@ Q(N): Quantidade de recortes para destacar N quadros
 
     > Equação de recorência:
 
-$Q(n) = 2 Q(\frac{n}{2}) + 1$
+\(Q(n) = 2 Q(\frac{n}{2}) + 1\)
 
-$Q(\frac{n}{2}) = 2 Q(\frac{n}4) + 1$
+\(Q(\frac{n}{2}) = 2 Q(\frac{n}4) + 1\)
 
-$Q(\frac{n}{4}) = 2 Q(\frac{n}8) + 1$
+\(Q(\frac{n}{4}) = 2 Q(\frac{n}8) + 1\)
+
+![Foto 02!](img/thumb_50.jpg "explicação da lousa")
 
 > Tabela pra calcula:
 
-| nivel |      tamanho      | custo nó  |    nivel    |            tamanho            |
-| :---- | :---------------: | :-------: | :---------: | :---------------------------: |
-| 0     |  $\frac{n}{2^0}$  |     c     |      1      |             $2^0$             |
-| 1     |  $\frac{n}{2^1}$  |     c     |      1      |             $2^1$             |
-| 2     |  $\frac{n}{2^2}$  |     c     |      1      |             $2^2$             |
-| 3     |  $\frac{n}{2^3}$  |     c     |      1      |             $2^3$             |
-| ****  |       ****        |   ****    |    ****     |             ****              |
-| ****  |       ****        |   ****    |    ****     |             ****              |
-| h-1   | $\frac{n}{2^h-1}$ |     c     |      1      |           $2^(h-1)$           |
-| h     |  $\frac{n}{2^h}$  | $2^h$ = n | $\Theta(1)$ | $\Theta(2^4)$ = $\Theta(2^n)$ |
+| nivel |        tamanho        |  custo nó   |     nivel     |              tamanho              |
+| :---- | :-------------------: | :---------: | :-----------: | :-------------------------------: |
+| 0     |   \(\frac{n}{2^0}\)   |      c      |       1       |              \(2^0\)              |
+| 1     |   \(\frac{n}{2^1}\)   |      c      |       1       |              \(2^1\)              |
+| 2     |   \(\frac{n}{2^2}\)   |      c      |       1       |              \(2^2\)              |
+| 3     |   \(\frac{n}{2^3}\)   |      c      |       1       |              \(2^3\)              |
+| ****  |         ****          |    ****     |     ****      |               ****                |
+| ****  |         ****          |    ****     |     ****      |               ****                |
+| h-1   | \(\frac{n}{2^{h-1}}\) |      c      |       1       |           \(2^{(h-1)}\)           |
+| h     |   \(\frac{n}{2^h}\)   | \(2^h\) = n | \(\Theta(1)\) | \(\Theta(2^4)\) = \(\Theta(2^n)\) |
 
+> O Valor de T(N) e o somatorio da coluna tamanho:
 
-    O Valor de T(N) e o somatorio da coluna tamanho: //TODO: Formula no caderno
-
+![Foto 02!](img/thumb_4c.jpg "explicação da lousa")
 
 > Teste de Algoritmos Interativos:
 
@@ -43,9 +45,10 @@ int soma(n)               c1        1
   total = n + 1           c2        1           T(n) = c1 + c2
   return total
 ```
+
 * Classe de complexidade
 
-Constante ou $\Theta(1)$
+Constante ou \(\Theta(1)\)
 
 ```
 int soma(n)                 tempo     #vezes      T(n) = \tetra(1)
@@ -57,7 +60,7 @@ int soma(n)                 tempo     #vezes      T(n) = \tetra(1)
 
 * Classe de complexidade
 
-Linear ou $\Theta(N)$
+Linear ou \(\Theta(N)\)
 
 > Teste de Algoritmos Recursivos:
 
@@ -72,8 +75,7 @@ int soma(n)               tempo     #vezes      T(n) = \tetra(1)
 
 * Classe de complexidade
 
-Linear ou $\Theta(N)$
-
+Linear ou \(\Theta(N)\)
 
 ```algoritmo
 int soma(n)
@@ -85,7 +87,5 @@ int soma(n)
 * Classe de complexidade
 
 Linear ou $\Theta(N)$
-
-
 
 [voltar](../../../README.md)

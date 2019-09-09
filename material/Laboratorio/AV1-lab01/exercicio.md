@@ -8,9 +8,7 @@ Data da Entrega: 11/08/2019 (enviar arquivo.odt)
 
 ### Exercício 1
 
-- **Passo 1**: Implementar o seguinte código em
-Java ou equivalente em outra linguagem de
-programação.
+- **Passo 1**: Implementar o seguinte código em Java ou equivalente em outra linguagem de programação.
 
 ```java
 import java.util.Scanner;
@@ -72,13 +70,9 @@ public class Exercicio1 {
 
 ---
 
-- **Passo 2:** Executar o código para cada valor de
-n = 1.000, 10.000, 100.000 (método soma1).
+- **Passo 2:** Executar o código para cada valor de n = 1.000, 10.000, 100.000 (método soma1).
 
-Para cada execução, copiar abaixo a saída do programa.
-Explicar porque o tempo de execução cresce à medida que
-o valor de n cresce. Obs.: este passo deve ser realizado
-obrigatoriamente no laboratório. (20%)
+Para cada execução, copiar abaixo a saída do programa. Explicar porque o tempo de execução cresce à medida que o valor de n cresce. Obs.: este passo deve ser realizado obrigatoriamente no laboratório. (20%)
 
 > Soma 1 instancia 1000:
 
@@ -100,16 +94,13 @@ obrigatoriamente no laboratório. (20%)
 
 > Explicação:
 
-De acordo com o tamanho da instancia eleva-se o tempo isso eleva o aumento das interações do laço levando mais tempo de execurção isso conclui-se pois
-e uma função Quadrática $O(nˆ2)$
+De acordo com o tamanho da instancia eleva-se o tempo isso eleva o aumento das interações do laço levando mais tempo de execurção isso conclui-se pois e uma função Quadrática O(n&sup2;)
 
 ---
 
 - **Passo 3:** Executar o código 3 vezes para o valor de n = 100.000 (método soma1).
 
-Para cada execução, copiar abaixo a saída do programa.
-Explicar porque o tempo de execução varia mesmo para valores iguais de n?
-Obs.: este passo deve ser realizado obrigatoriamente no laboratório. (20%)
+Para cada execução, copiar abaixo a saída do programa. Explicar porque o tempo de execução varia mesmo para valores iguais de n? Obs.: este passo deve ser realizado obrigatoriamente no laboratório. (20%)
 
 > Soma 1 instancia 100.000 x 3:
 
@@ -157,19 +148,13 @@ Executar o código para n = 100.000 (métodos soma1 e soma2). Copiar abaixo a sa
 
 > Explicação :
 
-Ha uma diferença entre as duas implementações estar na complexidade dos algoritmos onde eles transformados em funções matematicas usam de uma funções quadratica e o outro em uma função logaritmica, ou seja um e $O(n^2)$,
-$O(\log n)$ e o outro e uma.
+Ha uma diferença entre as duas implementações estar na complexidade dos algoritmos onde eles transformados em funções matematicas usam de uma funções quadratica e o outro em uma função logaritmica, ou seja um e O(n&sup2;), O( log n ) e o outro e uma.
 
 ---
 
 - **Passo 5:** Comentar o método soma1 e descomentar o método soma3.
 
-Executar o código para n = 100.000, 1.000.000, 10.000.000
-(métodos soma2 e soma3). Copiar abaixo a saída do programa.
-Explicar porque o tempo de execução do método soma3 não
-cresce embora o valor de n esteja crescendo? Obs.:
-este passo deve ser realizado obrigatoriamente no
-laboratório. (20%)
+Executar o código para n = 100.000, 1.000.000, 10.000.000 (métodos soma2 e soma3). Copiar abaixo a saída do programa. Explicar porque o tempo de execução do método soma3 não cresce embora o valor de n esteja crescendo? Obs.: este passo deve ser realizado obrigatoriamente no laboratório. (20%)
 
 > Soma 2 e 3, instancia 100000:
 
@@ -215,18 +200,16 @@ laboratório. (20%)
 
 > Explicação :
 
-Trata-se de uma função constante ou seja $O(1)$.
+Trata-se de uma função constante ou seja O(1).
 
 ---
 
 - **Passo 6:** Comentar de forma crítica a seguinte afirmativa:
 
-“a complexidade de um algoritmo depende de diversos fatores como
-tecnologia, hardware e tamanho do problema”. (20%)
+“a complexidade de um algoritmo depende de diversos fatores como tecnologia, hardware e tamanho do problema”. (20%)
 
 > Explicação :
 
-Sim isso e uma verdade, mas a complexidade se divide em espacial e temporal,
-pois.
+Sim isso e uma verdade, mas a complexidade se divide em espacial e temporal.
 
 [voltar](../../../README.md)

@@ -203,6 +203,10 @@ public class Exercicio1 {
 | 95   |    128    |   875 |
 | 100  |    136    |   928 |
 
+> Gráfico
+
+![Ordenando Crescente](./img/grafico_crescente.png)
+
 > Ordenado decrescente:
 
 | n    | insertion | merge |
@@ -228,6 +232,10 @@ public class Exercicio1 {
 | 90   |   5631    |   814 |
 | 95   |   6292    |   835 |
 | 100  |   6945    |   926 |
+
+> Gráfico
+
+![Ordenando Crescente](./img/grafico_decrescente.png)
 
 > Ordenado aleatório:
 
@@ -255,6 +263,10 @@ public class Exercicio1 {
 | 95   |   3023    |   872 |
 | 100  |   3992    |   926 |
 
+> Gráfico
+
+
+
 ---
 
 - **Passo 3:** Qual a complexidade do insertionSort para um vetor de n elementos previamente ordenados de forma crescente? Qual a complexidade do insertionSort para um vetor de n elementos previamente ordenados de forma decrescente? E, para um vetor com ordenação aleatória, o comportamento se aproxima mais ao comportamento de melhor caso ou ao de pior caso? Obs.: Lembre-se de que pode haver discrepâncias pontuais pois o tempo de execução depende de outros fatores, como o estado da máquina no momento da execução. Obs.: este passo deve ser realizado obrigatoriamente no laboratório. (20%).
@@ -263,13 +275,13 @@ public class Exercicio1 {
 
 $\Theta(n)$
 
-> InsertionSort para vetores de n elementos ordenados, de forma decrescente ou seja melhor pior caso:
+> Qual a complexidade do insertionSort para um vetor de n elementos previamente ordenados de forma decrescente:
 
 $\Theta(n^2)$
 
 > InsertionSort para vetores de n elementos ordenados, de forma aleatória ou seja melhor caso médio:
 
-$\Theta(n)$
+$\Theta(n^2)$
 
 ---
 
@@ -277,7 +289,7 @@ $\Theta(n)$
 
 > Explicação :
 
-Não, ele se mantem na complexidade de $\Theta(n)$.
+Não, ele se mantem na complexidade de $\Theta(n \lg n)$, entretanto para uma entrada pequena ou no caso acima os elementos ordenados ele tem um custo maior que o InsertionSort.
 
 ---
 
@@ -285,9 +297,7 @@ Não, ele se mantem na complexidade de $\Theta(n)$.
 
 > Explicação :
 
-Trata-se de uma função linear ou seja **O(n)**.
-
-Consiste essencialmente em movimentar elementos do vetor de um lugar para outro, sendo n o tamanho do vetor. O tempo de pecorer é proporcional ao número de movimentações. Portanto, o consumo de tempo da função é proporcional a n.  Assim, o algoritmo é linear.
+Para um vetor aleatorio o mergeSort e melhor opção pois tem um custo menor que o insertionSort, trata-se de uma função n-log-n ou seja **$n \log n$**.
 
 ---
 
