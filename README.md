@@ -19,3 +19,4 @@ O conteúdo pode ser consultado para provas ou duvidas no decorrer da disciplina
 4. [Laboratório](./material/Laboratorio/AV1-lab02/exercicio2.md)
 5. [19-agosto](./material/Aula/19-08/Explicacao.md)
 6. [04-setembro](./material/Aula/04-09/Explicacao.md)
+7. [26-agosto](./material/Aula/26-08/Complexidade_assintotica.md)
