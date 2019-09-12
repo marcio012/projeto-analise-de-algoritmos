@@ -12,19 +12,28 @@ Data da Entrega: 11/09/2019
 
 a. O algoritmo A consome tempo $O(n^2)$ e o B consome tempo $\Theta(n^4)$.
 
-O algoritmo *"A"* e mais rápido pois ele consume $O(n^2)$ no máximo ele e quadratico, enquanto que o *"B"* é um polinomio de 4 Grau.
+O algoritmo *"A"* e mais rápido pois ele consume $O(n^2)$ no máximo ele e quadratico, enquanto que o *"B"* é um polinomial de 4 Grau.
 
 b. O algoritmo A consome tempo $\Omega(n)$ e o B consome tempo $\Theta(n^2)$.
 
+**Resposta errada.**
 O algoritmo *"A"* e mais rápido pois ele consume $\Omega(n)$ no máximo ele e linear, enquanto que o *"B"* é quadratico.
+
+Não podemos inferi pois o algoritmo *A* pode ter uma complexidade inferio a quadratico
 
 c. O algoritmo A consome tempo $O(n^2)$ para instâncias de pior caso e o B consome tempo $\Omega(n^3)$ para instâncias de melhor caso.
 
+**Resposta errada.**
 Nesse caso não dar para saber pois se trata de comparação extrema melhor caso e pior caso são grandeza opostas.
+
+O algoritmo *A* e mais rápido pois no máximo ele será $Onˆ2$ e o B não e menor que $n^3$
 
 d. O algoritmo A consome tempo $\Omega(n^4)$ para instâncias de pior caso e o B consome $O(n^3)$ para instâncias de pior caso.
 
+**Resposta errada.**
 O algoritmo *B* e mais rápido que o *A*, pois o algoritmo *A* no seu melhor caso e *polinomial* $n^4$, ja o *B* por sua vez e polinomial de grau 3.
+
+Nesse caso em questão não podemos afirma, a menos na instancia de pior caso, o a e mais rápido na instancia de pior caso, nas demais instancias não podemos inferir.
 
 **Questão 2** [2,0 pontos]. Aplique o método mestre para resolver as seguintes recorrências.
 
@@ -50,6 +59,8 @@ $T(n) = aT(\frac{n}{b}) + f(n)$ $\Rightarrow$ $T(n) = 1T(n/3) + n$
   $n^{\log_b a} = n^{\log_3 1} = n^0 = 1$
   $f(n) = n = \Theta(1) = \Omega(n^{\log_3 1 + \epsilon})$
   $a f(\frac{n}{b})$ = $1 f(\frac{n}{3})$
+  **faltou**
+  $af(\frac{n}{b}) \leq cf(n) \exist c \leq 1$
 3. passo:
   Pelo caso 3, $T(n) = \Theta(f(n))$
 
@@ -101,6 +112,8 @@ $\Rightarrow T(n) \leq \frac{1}{\frac{1 - 1}{2}}n + \Theta(n)$
 $\Rightarrow T(n) = O(n)$
 
 $\Rightarrow$ Custo do nível $\frac{1}{2}^0 n$ e $T(n) = O(n) \Rightarrow T(n) = \Theta(n)$
+
+**Faltou**
 
 **Questão 4** [2,0 pontos]. Seja um vetor A de n elementos inteiros e positivos. É possível determinar a quantidade de elementos ímpares do vetor em $O(n)$, percorrendo-se os elementos do vetor de forma iterativa.
 
@@ -169,6 +182,7 @@ VetImpar(int[] a, int inicio, int fim) {
   }
 ```
 
+**Errei o caso e constante e não linear**
 $\Rightarrow T(n) = 2T(\frac{n}{2}) + n$
 
 $T(n) = aT(\frac{n}{b}) + f(n)$ $\Rightarrow T(n) = 2T(\frac{n}{2}) + n$
