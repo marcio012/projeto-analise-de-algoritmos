@@ -61,10 +61,12 @@ $T(n) = aT(\frac{n}{b}) + f(n)$ $\Rightarrow$ $T(n) = 1T(n/3) + n$
   $n^{\log_b a} = n^{\log_3 1} = n^0 = 1$
   $f(n) = n = \Theta(1) = \Omega(n^{\log_3 1 + \epsilon})$
   $a f(\frac{n}{b})$ = $1 f(\frac{n}{3})$
-  **faltou**
-  $af(\frac{n}{b}) \leq cf(n) \exist c \leq 1$
-3. passo:
-  Pelo caso 3, $T(n) = \Theta(f(n))$
+  $af(\frac{n}{b})$ $\leq cf(n)$  $\exists c \leq 1$
+  $1(\frac{n}{3})$ $\leq c(n)$ $\exists c \leq 1$
+  $c$ $\geq (\frac{1}{3})$ $\exists c \leq 1$
+
+1. passo:
+  Pelo caso 3, $T(n) = \Theta(n)$
 
 **(c)** $T(n) = 9T(n/3) + n$
 
@@ -87,23 +89,28 @@ $T(n) = aT(\frac{n}{b}) + f(n)$ $\Rightarrow$ $T(n) = 2T(n/2) + n^2$
 2. passo:
   $n^{\log_b a} = n^{\log_2 2} = n$
   $f(n) = n^2 = \Theta(n) = \Omega(n^{\log_b a + \epsilon}) = \Omega(n^{\log_2 2 + \epsilon})$
-  $a f(\frac{n}{b})$ = $2 f(\frac{n}{2})$
+  $a f(\frac{n}{b})$ $\leq c f(n)$ se $ \exists c < 1$
+  $2 f(\frac{n}{2})$ $\leq c f(n^2)$ se $ \exists c < 1$
+  $2 (\frac{n^4}{2})$ $\leq c n^2 $ se $ \exists c < 1$
+  $\frac{1}{2}$ $\leq c $ se $ \exists c < 1$
 3. passo:
-  Pelo caso 3, $T(n) = \Theta(f(n))$
+  Pelo caso 3, $T(n) = \Theta(n^2)$
 
 **Questão 3** [2,0 pontos]. Utilize uma árvore de recursão para determinar o limite assintótico estrito (notação $\Theta$) para a equação de recorrência $T(n) = 4T(\frac{n}{2}) + n$.
 
 ![árvore](img/arvore_recursao.png "árvore de recursão")
 
 
-| nivel    |          tam          |   #nos    |      #custo no      |      #custo nivel      |
-| :------- | :-------------------: | :-------: | :-----------------: | :--------------------: |
-| 0        |    $\frac{n}{2^0}$    |   $4^0$   |   $\frac{n}{2^0}$   |   $(\frac{1}{2})^0n$   |
-| 1        |    $\frac{n}{2^1}$    |   $4^1$   |   $\frac{n}{2^1}$   |   $(\frac{1}{2})^1n$   |
-| 2        |    $\frac{n}{2^2}$    |   $4^2$   |   $\frac{n}{2^2}$   |   $(\frac{1}{2})^2n$   |
-| $\vdots$ |       $\vdots$        | $\vdots$  |      $\vdots$       |        $\vdots$        |
-| $h-1$    |  $\frac{n}{2^{h-1}}$  | $4^{h-1}$ | $\frac{n}{2^{h-1}}$ | $(\frac{1}{2})^{h-1}n$ |
-| $h$      | $\frac{n}{2^{h}} = 1$ | $4^h = 0$ |     $\Theta(1)$     |      $\Theta(n)$       |
+| nivel    |          tam          |    #nos     |      #custo no      |      #custo nivel      |
+| :------- | :-------------------: | :---------: | :-----------------: | :--------------------: |
+| 0        |    $\frac{n}{2^0}$    |    $4^0$    |   $\frac{n}{2^0}$   |   $(\frac{1}{2})^0n$   |
+| 1        |    $\frac{n}{2^1}$    |    $4^1$    |   $\frac{n}{2^1}$   |   $(\frac{1}{2})^1n$   |
+| 2        |    $\frac{n}{2^2}$    |    $4^2$    |   $\frac{n}{2^2}$   |   $(\frac{1}{2})^2n$   |
+| $\vdots$ |       $\vdots$        |  $\vdots$   |      $\vdots$       |        $\vdots$        |
+| $h-1$    |  $\frac{n}{2^{h-1}}$  |  $4^{h-1}$  | $\frac{n}{2^{h-1}}$ | $(\frac{1}{2})^{h-1}n$ |
+| $h$      | $\frac{n}{2^{h}} = 1$ | $4^h = N^2$ |     $\Theta(1)$     |     $\Theta(n^2)$      |
+
+$\Rightarrow$ $ log_2 2^h = log_c N$ $\Rightarrow$ $h = log_2 N$
 
 $\Rightarrow$ Custo do nível e o somatorio: $T(n) = \displaystyle\sum_{i=0}^{h-1} (\frac{n}{2})^0n + \Theta(n)$
 
@@ -113,7 +120,7 @@ $\Rightarrow T(n) \leq \frac{1}{\frac{1 - 1}{2}}n + \Theta(n)$
 
 $\Rightarrow T(n) = O(n)$
 
-$\Rightarrow$ Custo do nível $\frac{1}{2}^0 n$ e $T(n) = O(n) \Rightarrow T(n) = \Theta(n)$
+$\Rightarrow$ Custo do nível $\frac{1}{2}^0 n$ e $T(n) = O(n) \Rightarrow T(n) = \Theta(n^2)$
 
 **Faltou**
 
@@ -174,28 +181,22 @@ VetImpar(int[] a, int inicio, int fim) {
     int v1 = VetImpar(a, inicio, meio)
     int v2 = VetImpar(a, meio + 1, fim)
 
-    if (v1 % 2 != 0) {
-      v1
-    }
-
-    if (v2 % 2 != 0) {
-      v2
-    }
+    return v1 + v2
   }
 ```
 
-**Errei o caso e constante e não linear**
-$\Rightarrow T(n) = 2T(\frac{n}{2}) + n$
+$\Rightarrow T(n) = 2T(\frac{n}{2}) + c$
 
-$T(n) = aT(\frac{n}{b}) + f(n)$ $\Rightarrow T(n) = 2T(\frac{n}{2}) + n$
+$T(n) = aT(\frac{n}{b}) + f(n)$ $\Rightarrow T(n) = 2T(\frac{n}{2}) + c$
 
 1. passo:
-  a = 2, b = 2 e $f(n) = n$
+  a = 2, b = 2 e $f(n) = c$
 2. passo:
   $n^{\log_b a} = n^{\log_2 2} = n$
-  $f(n) = n = \Theta(n) = \Theta(n^{\log_2 2})$
+  $f(n) = c \leq \Theta(n) = \Theta(n^{\log_2 2}) = \Theta(n)$
+  $f(n) = n \leq \Theta(1) = \Omega(n^{\log_3 1 - \epsilon})$
 3. passo:
-  Pelo caso 2, $T(n) = \Theta(n \log n)$
+  Pelo caso 1, $T(n) = \Theta(n)$
 
 **Questão 5** [2,0 pontos]. Determine um limite assintótico estrito (notação $\Theta$) do custo computacional da função abaixo. Indique qual o seu valor de retorno em função do parâmetro n?
 
@@ -213,9 +214,17 @@ int funcao(n)                     tempo
 | :---- | :---------------------------: | ------------: |
 | c1    |               1               |             c |
 | c2    |            $(n+1)$            |             n |
-| c3    | $\frac{[(n^2+1)+(n^2)]*n}{2}$ | $\Theta(n^3)$ |
-| c4    | $\frac{((3n^2) + 3n)*n^2}{2}$ | $\Theta(n^4)$ |
+| c3    | $\frac{[(n^2+1)+(n^2)]*n}{2}$ | $\Theta(n^2)$ |
+| c4    | $\frac{((3n^2) + 3n)*n^2}{2}$ | $\Theta(n^3)$ |
 | c5    |           $(n^3+2)$           | $\Theta(n^3)$ |
 | c6    |               1               |             c |
 
 Resultado: $T(n) = \Theta(n^4)$
+
+> Obs:
+> Interações: (numero_final - numero_inicial) + 1
+> Teste = #interar + 1
+
+> Obs:
+> $x = \frac{[(n^2+1) + (n^2-n+2)] + n}{2}$ = $\Theta(n^3)$
+> $y = \frac{[n^2 + (n^2-n+1)]+n}{2}$

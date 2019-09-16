@@ -1,0 +1,236 @@
+<h2 id="n584-projeto-e-análise-de-algoritmos">N584 – Projeto e Análise de Algoritmos</h2>
+<h3 id="prof.-napoleão-nepomuceno">Prof. Napoleão Nepomuceno</h3>
+<h4 id="av1---trabalho-de-projeto-análises-de-algoritmos">AV1 - Trabalho de Projeto Análises de Algoritmos</h4>
+<h5 id="márcio-heleno-matrícula-1814038">Márcio Heleno <strong>Matrícula: 1814038</strong></h5>
+<hr />
+<blockquote>
+<p>Entrega do trabalho: Data da Entrega: 11/09/2019</p>
+</blockquote>
+<p><strong>Questão 1</strong> [2,0 pontos]. Suponha que dois algoritmos, A e B, resolvem um mesmo problema. Assuma ainda que o tamanho das instâncias do problema é dado por um parâmetro n. Para cada item abaixo, assumindo-se n suficientemente grande, indique se A é mais rápido que B, se B é mais rápido que A, ou se não podemos inferir qual dos dois algoritmos é mais rápido. Justifique cada item.</p>
+<ol type="a">
+<li>O algoritmo A consome tempo <span class="math inline"><em>O</em>(<em>n</em><sup>2</sup>)</span> e o B consome tempo <span class="math inline"><em>Θ</em>(<em>n</em><sup>4</sup>)</span>.</li>
+</ol>
+<p>O algoritmo <em>“A”</em> e mais rápido pois ele consume <span class="math inline"><em>O</em>(<em>n</em><sup>2</sup>)</span> no máximo ele e quadratico, enquanto que o <em>“B”</em> é um polinomial de 4 Grau.</p>
+<ol start="2" type="a">
+<li>O algoritmo A consome tempo <span class="math inline"><em>Ω</em>(<em>n</em>)</span> e o B consome tempo <span class="math inline"><em>Θ</em>(<em>n</em><sup>2</sup>)</span>.</li>
+</ol>
+<p><strong>Resposta errada.</strong> O algoritmo <em>“A”</em> e mais rápido pois ele consume <span class="math inline"><em>Ω</em>(<em>n</em>)</span> no máximo ele e linear, enquanto que o <em>“B”</em> é quadratico.</p>
+<p><strong>Resposta certa.</strong> Não podemos inferi pois o algoritmo <em>A</em> pode ter uma complexidade inferior a quadratico</p>
+<ol start="3" type="a">
+<li>O algoritmo A consome tempo <span class="math inline"><em>O</em>(<em>n</em><sup>2</sup>)</span> para instâncias de pior caso e o B consome tempo <span class="math inline"><em>Ω</em>(<em>n</em><sup>3</sup>)</span> para instâncias de melhor caso.</li>
+</ol>
+<p><strong>Resposta errada.</strong> Nesse caso não dar para saber pois se trata de comparação extrema melhor caso e pior caso são grandeza opostas.</p>
+<p><strong>Resposta certa.</strong> O algoritmo <em>A</em> e mais rápido pois no máximo ele será <span class="math inline"><em>O</em><em>n</em><sup>2</sup></span> e o B não e menor que <span class="math inline"><em>n</em><sup>3</sup></span></p>
+<ol start="4" type="a">
+<li>O algoritmo A consome tempo <span class="math inline"><em>Ω</em>(<em>n</em><sup>4</sup>)</span> para instâncias de pior caso e o B consome <span class="math inline"><em>O</em>(<em>n</em><sup>3</sup>)</span> para instâncias de pior caso.</li>
+</ol>
+<p><strong>Resposta errada.</strong> O algoritmo <em>B</em> e mais rápido que o <em>A</em>, pois o algoritmo <em>A</em> no seu melhor caso e <em>polinomial</em> <span class="math inline"><em>n</em><sup>4</sup></span>, ja o <em>B</em> por sua vez e polinomial de grau 3.</p>
+<p>Nesse caso em questão não podemos afirma, a menos na instancia de pior caso, o <em>A</em> e mais rápido na instancia de pior caso, nas demais instancias não podemos inferir.</p>
+<p><strong>Questão 2</strong> [2,0 pontos]. Aplique o método mestre para resolver as seguintes recorrências.</p>
+<p><strong>(a)</strong> <span class="math inline"><em>T</em>(<em>n</em>) = 4<em>T</em>(<em>n</em>/4) + <em>n</em></span></p>
+<p><span class="math inline">$T(n) = aT(\frac{n}{b}) + f(n)$</span> <span class="math inline">⇒</span> <span class="math inline">$T(n) = 4T(\frac{n}{4}) + n$</span></p>
+<ol type="1">
+<li>passo: a = 4, b = 4 e <span class="math inline"><em>f</em>(<em>n</em>) = <em>n</em></span></li>
+<li>passo: <span class="math inline"><em>n</em><sup>log<sub><em>b</em></sub><em>a</em></sup> = <em>n</em><sup>log<sub>4</sub>4</sup> = <em>n</em><sup>1</sup> = <em>n</em></span> <span class="math inline"><em>f</em>(<em>n</em>) = <em>n</em> = <em>Θ</em>(<em>n</em>) = <em>Θ</em>(<em>n</em><sup>log<sub>4</sub>4</sup>)</span></li>
+<li>passo: Pelo caso 2, <span class="math inline"><em>T</em>(<em>n</em>) = <em>Θ</em>(<em>n</em>log <em>n</em>)</span></li>
+</ol>
+<p><strong>(b)</strong> <span class="math inline"><em>T</em>(<em>n</em>) = 1<em>T</em>(<em>n</em>/3) + <em>n</em></span></p>
+<p><span class="math inline">$T(n) = aT(\frac{n}{b}) + f(n)$</span> <span class="math inline">⇒</span> <span class="math inline"><em>T</em>(<em>n</em>) = 1<em>T</em>(<em>n</em>/3) + <em>n</em></span></p>
+<ol type="1">
+<li><p>passo: a = 1, b = 3 e <span class="math inline"><em>f</em>(<em>n</em>) = <em>n</em></span></p></li>
+<li><p>passo: <span class="math inline"><em>n</em><sup>log<sub><em>b</em></sub><em>a</em></sup> = <em>n</em><sup>log<sub>3</sub>1</sup> = <em>n</em><sup>0</sup> = 1</span> <span class="math inline"><em>f</em>(<em>n</em>) = <em>n</em> = <em>Θ</em>(1) = <em>Ω</em>(<em>n</em><sup>log<sub>3</sub>1 + <em>ϵ</em></sup>)</span> <span class="math inline">$a f(\frac{n}{b})$</span> = <span class="math inline">$1 f(\frac{n}{3})$</span> <span class="math inline">$af(\frac{n}{b})$</span> <span class="math inline"> ≤ <em>c</em><em>f</em>(<em>n</em>)</span> <span class="math inline">∃<em>c</em> ≤ 1</span> <span class="math inline">$1(\frac{n}{3})$</span> <span class="math inline"> ≤ <em>c</em>(<em>n</em>)</span> <span class="math inline">∃<em>c</em> ≤ 1</span> <span class="math inline"><em>c</em></span> <span class="math inline">$\geq (\frac{1}{3})$</span> <span class="math inline">∃<em>c</em> ≤ 1</span></p></li>
+<li><p>passo: Pelo caso 3, <span class="math inline"><em>T</em>(<em>n</em>) = <em>Θ</em>(<em>n</em>)</span></p></li>
+</ol>
+<p><strong>(c)</strong> <span class="math inline"><em>T</em>(<em>n</em>) = 9<em>T</em>(<em>n</em>/3) + <em>n</em></span></p>
+<p><span class="math inline">$T(n) = aT(\frac{n}{b}) + f(n)$</span> <span class="math inline">⇒</span> <span class="math inline"><em>T</em>(<em>n</em>) = 9<em>T</em>(<em>n</em>/3) + <em>n</em></span></p>
+<ol type="1">
+<li>passo: a = 9, b = 3 e <span class="math inline"><em>f</em>(<em>n</em>) = <em>n</em></span></li>
+<li>passo: <span class="math inline"><em>n</em><sup>log<sub><em>b</em></sub><em>a</em></sup> = <em>n</em><sup>log<sub>3</sub>9</sup> = <em>n</em><sup>2</sup></span> <span class="math inline"><em>f</em>(<em>n</em>) = <em>n</em> = <em>O</em>(<em>n</em><sup>log<sub><em>b</em></sub><em>a</em> − <em>ϵ</em></sup>) = <em>O</em>(<em>n</em><sup>log<sub>3</sub>9 − <em>ϵ</em></sup>)</span></li>
+<li>passo: Pelo caso 1, <span class="math inline"><em>T</em>(<em>n</em>) = <em>Θ</em>(<em>n</em><sup>2</sup>)</span></li>
+</ol>
+<p><strong>(d)</strong> <span class="math inline"><em>T</em>(<em>n</em>) = 2<em>T</em>(<em>n</em>/2) + <em>n</em><sup>2</sup></span></p>
+<p><span class="math inline">$T(n) = aT(\frac{n}{b}) + f(n)$</span> <span class="math inline">⇒</span> <span class="math inline"><em>T</em>(<em>n</em>) = 2<em>T</em>(<em>n</em>/2) + <em>n</em><sup>2</sup></span></p>
+<ol type="1">
+<li>passo: a = 2, b = 2 e <span class="math inline"><em>f</em>(<em>n</em>) = <em>n</em><sup>2</sup></span></li>
+<li>passo: <span class="math inline"><em>n</em><sup>log<sub><em>b</em></sub><em>a</em></sup> = <em>n</em><sup>log<sub>2</sub>2</sup> = <em>n</em></span> <span class="math inline"><em>f</em>(<em>n</em>) = <em>n</em><sup>2</sup> = <em>Θ</em>(<em>n</em>) = <em>Ω</em>(<em>n</em><sup>log<sub><em>b</em></sub><em>a</em> + <em>ϵ</em></sup>) = <em>Ω</em>(<em>n</em><sup>log<sub>2</sub>2 + <em>ϵ</em></sup>)</span> <span class="math inline">$a f(\frac{n}{b})$</span> <span class="math inline"> ≤ <em>c</em><em>f</em>(<em>n</em>)</span> se $ c &lt; 1$ <span class="math inline">$2 f(\frac{n}{2})$</span> <span class="math inline"> ≤ <em>c</em><em>f</em>(<em>n</em><sup>2</sup>)</span> se $ c &lt; 1$ <span class="math inline">$2 (\frac{n^4}{2})$</span> $c n^2 $ se $ c &lt; 1$ <span class="math inline">$\frac{1}{2}$</span> $c $ se $ c &lt; 1$</li>
+<li>passo: Pelo caso 3, <span class="math inline"><em>T</em>(<em>n</em>) = <em>Θ</em>(<em>n</em><sup>2</sup>)</span></li>
+</ol>
+<p><strong>Questão 3</strong> [2,0 pontos]. Utilize uma árvore de recursão para determinar o limite assintótico estrito (notação <span class="math inline"><em>Θ</em></span>) para a equação de recorrência <span class="math inline">$T(n) = 4T(\frac{n}{2}) + n$</span>.</p>
+<figure>
+<img src="img/arvore_recursao.png" title="árvore de recursão" alt="" /><figcaption>árvore</figcaption>
+</figure>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">nivel</th>
+<th style="text-align: center;">tam</th>
+<th style="text-align: center;">#nos</th>
+<th style="text-align: center;">#custo no</th>
+<th style="text-align: center;">#custo nivel</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">0</td>
+<td style="text-align: center;"><span class="math inline">$\frac{n}{2^0}$</span></td>
+<td style="text-align: center;"><span class="math inline">4<sup>0</sup></span></td>
+<td style="text-align: center;"><span class="math inline">$\frac{n}{2^0}$</span></td>
+<td style="text-align: center;"><span class="math inline">$(\frac{1}{2})^0n$</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: center;"><span class="math inline">$\frac{n}{2^1}$</span></td>
+<td style="text-align: center;"><span class="math inline">4<sup>1</sup></span></td>
+<td style="text-align: center;"><span class="math inline">$\frac{n}{2^1}$</span></td>
+<td style="text-align: center;"><span class="math inline">$(\frac{1}{2})^1n$</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2</td>
+<td style="text-align: center;"><span class="math inline">$\frac{n}{2^2}$</span></td>
+<td style="text-align: center;"><span class="math inline">4<sup>2</sup></span></td>
+<td style="text-align: center;"><span class="math inline">$\frac{n}{2^2}$</span></td>
+<td style="text-align: center;"><span class="math inline">$(\frac{1}{2})^2n$</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">⋮</span></td>
+<td style="text-align: center;"><span class="math inline">⋮</span></td>
+<td style="text-align: center;"><span class="math inline">⋮</span></td>
+<td style="text-align: center;"><span class="math inline">⋮</span></td>
+<td style="text-align: center;"><span class="math inline">⋮</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline"><em>h</em> − 1</span></td>
+<td style="text-align: center;"><span class="math inline">$\frac{n}{2^{h-1}}$</span></td>
+<td style="text-align: center;"><span class="math inline">4<sup><em>h</em> − 1</sup></span></td>
+<td style="text-align: center;"><span class="math inline">$\frac{n}{2^{h-1}}$</span></td>
+<td style="text-align: center;"><span class="math inline">$(\frac{1}{2})^{h-1}n$</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline"><em>h</em></span></td>
+<td style="text-align: center;"><span class="math inline">$\frac{n}{2^{h}} = 1$</span></td>
+<td style="text-align: center;"><span class="math inline">4<sup><em>h</em></sup> = <em>N</em><sup>2</sup></span></td>
+<td style="text-align: center;"><span class="math inline"><em>Θ</em>(1)</span></td>
+<td style="text-align: center;"><span class="math inline"><em>Θ</em>(<em>n</em><sup>2</sup>)</span></td>
+</tr>
+</tbody>
+</table>
+<p><span class="math inline">⇒</span> $ log_2 2^h = log_c N$ <span class="math inline">⇒</span> <span class="math inline"><em>h</em> = <em>l</em><em>o</em><em>g</em><sub>2</sub><em>N</em></span></p>
+<p><span class="math inline">⇒</span> Custo do nível e o somatorio: <span class="math inline">$T(n) = \displaystyle\sum_{i=0}^{h-1} (\frac{n}{2})^0n + \Theta(n)$</span></p>
+<p><span class="math inline">$\Rightarrow T(n) \leq \displaystyle\sum_{i=0}^{\infty} (\frac{1}{2})^0n + \Theta(n)$</span></p>
+<p><span class="math inline">$\Rightarrow T(n) \leq \frac{1}{\frac{1 - 1}{2}}n + \Theta(n)$</span></p>
+<p><span class="math inline"> ⇒ <em>T</em>(<em>n</em>) = <em>O</em>(<em>n</em>)</span></p>
+<p><span class="math inline">⇒</span> Custo do nível <span class="math inline">$\frac{1}{2}^0 n$</span> e <span class="math inline"><em>T</em>(<em>n</em>) = <em>O</em>(<em>n</em>) ⇒ <em>T</em>(<em>n</em>) = <em>Θ</em>(<em>n</em><sup>2</sup>)</span></p>
+<p><strong>Faltou</strong></p>
+<p><strong>Questão 4</strong> [2,0 pontos]. Seja um vetor A de n elementos inteiros e positivos. É possível determinar a quantidade de elementos ímpares do vetor em <span class="math inline"><em>O</em>(<em>n</em>)</span>, percorrendo-se os elementos do vetor de forma iterativa.</p>
+<p>Alternativamente, pode-se utilizar um método de divisão-e-conquista. Faça uma função para determinar a quantidade de elementos ímpares do vetor. O algoritmo deve recursivamente dividir o vetor em duas partes de tamanhos aproximadamente iguais até se chegar a um caso trivial.</p>
+<p>Determine e resolva a equação de recorrência para o seu algoritmo.</p>
+<p>O algoritmo recursivo é assintoticamente mais eficiente do que o algoritmo iterativo? Obs: para encontrar o ponto médio, utilize <span class="math inline"><em>m</em> = (<em>i</em> + <em>f</em>)/2</span>, onde i e f são, respectivamente, os índices inicial e final do subvetor.</p>
+<ul>
+<li>Interativo</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1"></a><span class="dt">int</span> vet1[] = <span class="kw">new</span> <span class="dt">int</span>[<span class="dv">10</span>];</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="dt">int</span> qtdImpar = <span class="dv">0</span>;</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="kw">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; vet1.<span class="fu">length</span>; i++) {</span>
+<span id="cb1-4"><a href="#cb1-4"></a>  <span class="kw">if</span> (i % <span class="dv">2</span> != <span class="dv">0</span>) {</span>
+<span id="cb1-5"><a href="#cb1-5"></a>      <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;é impar&quot;</span>);</span>
+<span id="cb1-6"><a href="#cb1-6"></a>      qtdImpar++;</span>
+<span id="cb1-7"><a href="#cb1-7"></a>  } <span class="kw">else</span> {</span>
+<span id="cb1-8"><a href="#cb1-8"></a>      <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;é par&quot;</span>);</span>
+<span id="cb1-9"><a href="#cb1-9"></a>  }</span>
+<span id="cb1-10"><a href="#cb1-10"></a>}</span></code></pre></div>
+<ul>
+<li>Recursivo</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">public</span> <span class="dt">static</span> <span class="dt">int</span> <span class="fu">VetImpar</span>(<span class="dt">int</span>[] a, <span class="dt">int</span> inicio, <span class="dt">int</span> fim) {</span>
+<span id="cb2-2"><a href="#cb2-2"></a>  <span class="kw">if</span> (inicio == fim) {</span>
+<span id="cb2-3"><a href="#cb2-3"></a>    <span class="co">// apenas um elemento, retorna ele proprio</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a>    <span class="kw">return</span> a[inicio];</span>
+<span id="cb2-5"><a href="#cb2-5"></a>  } <span class="kw">else</span> {</span>
+<span id="cb2-6"><a href="#cb2-6"></a>    <span class="co">// Meu problema ainda pode ser dividido em pedaços menores</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a>    <span class="dt">int</span> meio = (inicio + fim) / <span class="dv">2</span>;</span>
+<span id="cb2-8"><a href="#cb2-8"></a>    <span class="dt">int</span> v1 = <span class="fu">VetImpar</span>(a, inicio, meio);</span>
+<span id="cb2-9"><a href="#cb2-9"></a>    <span class="dt">int</span> v2 = <span class="fu">VetImpar</span>(a, meio + <span class="dv">1</span>, fim);</span>
+<span id="cb2-10"><a href="#cb2-10"></a></span>
+<span id="cb2-11"><a href="#cb2-11"></a>    <span class="kw">if</span> (v1 % <span class="dv">2</span> != <span class="dv">0</span>) {</span>
+<span id="cb2-12"><a href="#cb2-12"></a>        <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(v1);</span>
+<span id="cb2-13"><a href="#cb2-13"></a>    }</span>
+<span id="cb2-14"><a href="#cb2-14"></a></span>
+<span id="cb2-15"><a href="#cb2-15"></a>    <span class="kw">if</span> (v2 % <span class="dv">2</span> != <span class="dv">0</span>) {</span>
+<span id="cb2-16"><a href="#cb2-16"></a>        <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(v2);</span>
+<span id="cb2-17"><a href="#cb2-17"></a>    }</span>
+<span id="cb2-18"><a href="#cb2-18"></a>    <span class="kw">return</span> <span class="dv">0</span>;</span>
+<span id="cb2-19"><a href="#cb2-19"></a>  }</span></code></pre></div>
+<pre class="pseudocodigo"><code>VetImpar(int[] a, int inicio, int fim) {
+  if (inicio == fim) {
+    return a[inicio]
+  } else {
+    // Meu problema ainda pode ser dividido em pedaços menores
+    int meio = (inicio + fim) / 2
+    int v1 = VetImpar(a, inicio, meio)
+    int v2 = VetImpar(a, meio + 1, fim)
+
+    return v1 + v2
+  }</code></pre>
+<p><span class="math inline">$\Rightarrow T(n) = 2T(\frac{n}{2}) + c$</span></p>
+<p><span class="math inline">$T(n) = aT(\frac{n}{b}) + f(n)$</span> <span class="math inline">$\Rightarrow T(n) = 2T(\frac{n}{2}) + c$</span></p>
+<ol type="1">
+<li>passo: a = 2, b = 2 e <span class="math inline"><em>f</em>(<em>n</em>) = <em>c</em></span></li>
+<li>passo: <span class="math inline"><em>n</em><sup>log<sub><em>b</em></sub><em>a</em></sup> = <em>n</em><sup>log<sub>2</sub>2</sup> = <em>n</em></span> <span class="math inline"><em>f</em>(<em>n</em>) = <em>c</em> ≤ <em>Θ</em>(<em>n</em>) = <em>Θ</em>(<em>n</em><sup>log<sub>2</sub>2</sup>) = <em>Θ</em>(<em>n</em>)</span> <span class="math inline"><em>f</em>(<em>n</em>) = <em>n</em> ≤ <em>Θ</em>(1) = <em>Ω</em>(<em>n</em><sup>log<sub>3</sub>1 − <em>ϵ</em></sup>)</span></li>
+<li>passo: Pelo caso 1, <span class="math inline"><em>T</em>(<em>n</em>) = <em>Θ</em>(<em>n</em>)</span></li>
+</ol>
+<p><strong>Questão 5</strong> [2,0 pontos]. Determine um limite assintótico estrito (notação <span class="math inline"><em>Θ</em></span>) do custo computacional da função abaixo. Indique qual o seu valor de retorno em função do parâmetro n?</p>
+<pre><code>int funcao(n)                     tempo
+    sum = 0                        c1
+    for i = 1 to n                 c2
+        for j = i to n*n           c3
+            for k = 1 to 2         c4
+                sum = sum + 10     c5
+    return sum                     c6</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">tempo</th>
+<th style="text-align: center;"># vezes</th>
+<th style="text-align: right;">custo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">c1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: right;">c</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">c2</td>
+<td style="text-align: center;"><span class="math inline">(<em>n</em> + 1)</span></td>
+<td style="text-align: right;">n</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">c3</td>
+<td style="text-align: center;"><span class="math inline">$\frac{[(n^2+1)+(n^2)]*n}{2}$</span></td>
+<td style="text-align: right;"><span class="math inline"><em>Θ</em>(<em>n</em><sup>2</sup>)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">c4</td>
+<td style="text-align: center;"><span class="math inline">$\frac{((3n^2) + 3n)*n^2}{2}$</span></td>
+<td style="text-align: right;"><span class="math inline"><em>Θ</em>(<em>n</em><sup>3</sup>)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">c5</td>
+<td style="text-align: center;"><span class="math inline">(<em>n</em><sup>3</sup> + 2)</span></td>
+<td style="text-align: right;"><span class="math inline"><em>Θ</em>(<em>n</em><sup>3</sup>)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">c6</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: right;">c</td>
+</tr>
+</tbody>
+</table>
+<p>Resultado: <span class="math inline"><em>T</em>(<em>n</em>) = <em>Θ</em>(<em>n</em><sup>4</sup>)</span></p>
+<blockquote>
+<p>Obs: Interações: (numero_final - numero_inicial) + 1 Teste = #interar + 1</p>
+</blockquote>
+<blockquote>
+<p>Obs: <span class="math inline">$x = \frac{[(n^2+1) + (n^2-n+2)] + n}{2}$</span> = <span class="math inline"><em>Θ</em>(<em>n</em><sup>3</sup>)</span> <span class="math inline">$y = \frac{[n^2 + (n^2-n+1)]+n}{2}$</span></p>
+</blockquote>
