@@ -19,21 +19,23 @@ b. O algoritmo A consome tempo $\Omega(n)$ e o B consome tempo $\Theta(n^2)$.
 **Resposta errada.**
 O algoritmo *"A"* e mais rápido pois ele consume $\Omega(n)$ no máximo ele e linear, enquanto que o *"B"* é quadratico.
 
-Não podemos inferi pois o algoritmo *A* pode ter uma complexidade inferio a quadratico
+**Resposta certa.**
+Não podemos inferi pois o algoritmo *A* pode ter uma complexidade inferior a quadratico
 
 c. O algoritmo A consome tempo $O(n^2)$ para instâncias de pior caso e o B consome tempo $\Omega(n^3)$ para instâncias de melhor caso.
 
 **Resposta errada.**
 Nesse caso não dar para saber pois se trata de comparação extrema melhor caso e pior caso são grandeza opostas.
 
-O algoritmo *A* e mais rápido pois no máximo ele será $Onˆ2$ e o B não e menor que $n^3$
+**Resposta certa.**
+O algoritmo *A* e mais rápido pois no máximo ele será $On^2$ e o B não e menor que $n^3$
 
 d. O algoritmo A consome tempo $\Omega(n^4)$ para instâncias de pior caso e o B consome $O(n^3)$ para instâncias de pior caso.
 
 **Resposta errada.**
 O algoritmo *B* e mais rápido que o *A*, pois o algoritmo *A* no seu melhor caso e *polinomial* $n^4$, ja o *B* por sua vez e polinomial de grau 3.
 
-Nesse caso em questão não podemos afirma, a menos na instancia de pior caso, o a e mais rápido na instancia de pior caso, nas demais instancias não podemos inferir.
+Nesse caso em questão não podemos afirma, a menos na instancia de pior caso, o *A* e mais rápido na instancia de pior caso, nas demais instancias não podemos inferir.
 
 **Questão 2** [2,0 pontos]. Aplique o método mestre para resolver as seguintes recorrências.
 
