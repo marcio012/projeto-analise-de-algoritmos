@@ -13,7 +13,7 @@ O conteúdo pode ser consultado para provas ou duvidas no decorrer da disciplina
 
 #### Sumário
 
-1. [07-agosto](./material/Aula/07-08/Explicacao.md)
+1. [Introdução](./material/Aula/07-08/Explicacao.md)
 2. [Laboratório](./material/Laboratorio/AV1-lab01/exercicio.md)
 3. [12-agosto](./material/Aula/12-08/Explicacao.md)
 4. [Laboratório](./material/Laboratorio/AV1-lab02/exercicio2.md)
