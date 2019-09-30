@@ -139,20 +139,23 @@ Right A(4):
 static void maxheapfy (int[] V, int i) {
   int l = left(i);
   int r = right(i);
-  int maior = 0;
+  int maior = i;
+
   if (l <= V.length && V[l] > V[i]) {
       maior = l;
   } else {
       maior = i;
   }
+
   if (r <= V.length && V[r] > V[maior]) {
       maior = r;
   }
+
   if (maior != i) {
       int trocar = V[i];
       V[i] = V[maior];
       V[maior] = trocar;
-      maxheapfy(V, i);
+      maxheapfy(V, maior);
   }
 }
 ```
