@@ -77,6 +77,58 @@ public class Exercicio1 {
 
 **Passo 2:** O vetor criancas armazena os dados de n crianças de faixa etária de 6 a 16 anos. Cada registro possui um campo nome, um campo idade e um campo sexo. Escreva um algoritmo de reorganização desse vetor de tal forma que todas as crianças do sexo feminino venham antes das crianças do sexo masculino. Seu algoritmo de reorganização deve executar em tempo O(n) e ser local. Escreva a saída do seu programa após a reorganização do vetor. Realize a análise de complexidade do seu algoritmo. Obs.: esta questão deve ser obrigatoriamente realizada em laboratório. (30%)
 
+> implementação:
+
+```java
+
+1. static void organizaSexo (Crianca[] A) {
+2.   char pivo = 'F'; // pivo
+3.   int x = -1;
+4.   for (int i = 0; i < A.length; i++) {
+5.       if (A[i].sexo == pivo) {
+6.           x++;
+7.           troca(A, x, i);
+8.       }
+9.   }
+10. }
+
+------
+
+1. private static void troca(Crianca[] A, int j, int k) {
+2.   Crianca temp = A[j];
+3.   A[j] = A[k];
+4.   A[k] = temp;
+5. }
+
+```
+
+> saída:
+
+| nome       | idade | sexo |
+| :--------- | :---: | ---: |
+| Qbbjerjeoc |  15   |    F |
+| Bsletohpdp |   8   |    F |
+| Vgrcywrvpl |  15   |    F |
+| Ldlitvfduq |  14   |    F |
+| Kmgsxnheqz |   8   |    F |
+| Xvwxjmsjyw |  13   |    F |
+| Aurphgpwly |  12   |    F |
+| Ifgosucdqy |   7   |    F |
+| Bhxcoxghxn |   6   |    M |
+| Dthaaxuunz |   7   |    M |
+| Sunfmljpsq |   8   |    M |
+| Iwyalvdfjb |  11   |    M |
+| Ucjfornyiv |  14   |    M |
+| Dhythoqqpt |  11   |    M |
+| Jagmydiawc |   8   |    M |
+| Btzwoigqaf |  12   |    M |
+| Dyzjmvfyep |  16   |    M |
+| Phdvamseax |   9   |    M |
+| Bwjttnzlii |  14   |    M |
+| Vnafeqrdyf |   6   |    M |
+
+> análise:
+
 **Passo 3:** Escreva um algoritmo de reorganização desse vetor obedecendo a ordem: crianças de 6 a 10 anos; crianças de 11 a 14 anos; e crianças de 15 a 16 anos. Seu algoritmo de reorganização deve executar em tempo O(n) e ser local. Escreva a saída do seu programa após a reorganização do vetor. Realize a análise de complexidade do seu algoritmo. (40%)
 
 **Passo 4:** Escreva um algoritmo de reorganização desse vetor obedecendo a ordem: crianças de 6 a 10 anos; crianças de 11 a 14 anos; e crianças de 15 a 16 anos. Em cada grupo, a ordenação relativa original deve ser preservada. Seu algoritmo de reorganização deve executar em tempo O(n), mas pode ser não local. Escreva a saída do seu programa após a reorganização do vetor. Realize a análise de complexidade do seu algoritmo. (30%)
