@@ -129,6 +129,19 @@ public class Exercicio1 {
 
 > análise:
 
+| linha    | tempo |           vezes |
+| :------- | :---: | --------------: |
+| 1 função |       |                 |
+| 2        |  c1   |               1 |
+| 3        |  c2   |               1 |
+| 4        |  c3   |           n + 1 |
+| 5        |  c4   |               n |
+| 6        |  c5   |               n |
+| 7 função |  c6   | n = $\Theta(1)$ |
+
+T(n) = $c1 + c2 + c3(n + 1) + c4n + c5n + c6n$ =
+T(n) = $4n + 3$ => **linear** T(n) = $\Theta(n)$
+
 **Passo 3:** Escreva um algoritmo de reorganização desse vetor obedecendo a ordem: crianças de 6 a 10 anos; crianças de 11 a 14 anos; e crianças de 15 a 16 anos. Seu algoritmo de reorganização deve executar em tempo O(n) e ser local. Escreva a saída do seu programa após a reorganização do vetor. Realize a análise de complexidade do seu algoritmo. (40%)
 
 **Passo 4:** Escreva um algoritmo de reorganização desse vetor obedecendo a ordem: crianças de 6 a 10 anos; crianças de 11 a 14 anos; e crianças de 15 a 16 anos. Em cada grupo, a ordenação relativa original deve ser preservada. Seu algoritmo de reorganização deve executar em tempo O(n), mas pode ser não local. Escreva a saída do seu programa após a reorganização do vetor. Realize a análise de complexidade do seu algoritmo. (30%)
