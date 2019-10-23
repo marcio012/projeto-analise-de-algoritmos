@@ -2,248 +2,157 @@
 
 ### Prof. Napoleão Nepomuceno
 
-#### AV2 - Lab01
+#### AV2 - Lab04
 
-##### Data do Laboratório: 25/09/2019
+##### Data do Laboratório: 23/10/2019
 
 ##### Márcio Heleno **Matrícula: 1814038**
 
 ---
 
 > Entrega do trabalho:
-> Data da Entrega: 29/09/2019 (enviar arquivo .odt)
+> Data da Entrega: 27/10/2019 (enviar arquivo .odt)
 
-### Exercício 1 - Av2
+### Exercício 4 - Av2
 
 - **Passo 1:** Implementar o seguinte código em Java ou equivalente em outra linguagem de programação.
 
-```java
-import java.util.Random;
-public class HeapSort {
+```Java
+public class Exercicio1 {
+
+	static int[][] qtde;
+	static int[][] queb;
+
 	public static void main(String[] args) {
-		int[] A = {86, 78, 36, 61, 67, 34, 58, 42, 35, 59, 62, 28, 60, 37, 12};
-		System.out.println("Vetor A:");
-		imprimeVetor(A);
-		System.out.println("Heap A:");
-		imprimeHeap(A);
-		//int[] B = criaVetorAleatorio(15);
-		//System.out.println("------------------------------------------------------------------------------------------");
-		//System.out.println("Vetor B:");
-		//imprimeVetor(B);
-		//imprimeHeap(B);
-	}
+		int [] p = {3, 1, 2, 3, 4, 2, 1, 5, 9, 8, 2, 4, 3, 6, 3, 8};
+		//int [] p = {4, 5, 3, 2, 6, 1, 5, 6, 2, 7, 2, 1, 4, 3, 2, 8, 3,
+		//	   6, 5, 2, 6, 2, 5, 2, 8, 3, 6, 4, 5, 3, 7, 4, 6, 3};
+		int n = p.length-1;
+		double inicio, fim, tempo;
+		int m;
 
-	static int left (int i) {
-		// to do
-	}
-
-	static int right (int i) {
-		// to do
-	}
-
-	static void maxheapfy (int[] V, int i) {
-		int l = left(i);
-		int r = right(i);
-		int m = i;
-		// to do
-	}
-
-	static void buildmaxheap (int[] V) {
-		// to do
-	}
-
-	static int[] criaVetorAleatorio (int n) {
-		Random randomGenerator = new Random();
-		int[] A = new int[n];
-		for (int i = 0; i < n; i++) {
-			A[i] = randomGenerator.nextInt(10 * n);
+		qtde = new int[n+1][n+1];
+		queb = new int[n+1][n+1];
+		for (int i = 1; i <= n; i++) {
+			for (int j = i; j <= n; j++) {
+				qtde[i][j] = Integer.MAX_VALUE;
+			}
 		}
-		return A;
+
+		inicio = System.currentTimeMillis();
+		m = recursivo(p, 1, n);
+		fim = System.currentTimeMillis();
+		tempo = fim - inicio;
+		imprime(queb, 1, n);
+		System.out.println();
+		System.out.printf("%-15s%10s%10s\n", "Método", "Qtde", "Tempo");
+		System.out.printf("%-15s%10d%10.2f\n\n", "Recursivo", m, tempo);
+
+		inicio = System.currentTimeMillis();
+		m = memoization(p, 1, n);
+		fim = System.currentTimeMillis();
+		tempo = fim - inicio;
+		imprime(queb, 1, n);
+		System.out.println();
+		System.out.printf("%-15s%10s%10s\n", "Método", "Qtde", "Tempo");
+		System.out.printf("%-15s%10d%10.2f\n\n", "Memoization", m, tempo);
+
+		inicio = System.currentTimeMillis();
+		m = dinamico(p);
+		fim = System.currentTimeMillis();
+		tempo = fim - inicio;
+		System.out.println();
+		System.out.printf("%-15s%10s%10s\n", "Método", "Qtde", "Tempo");
+		System.out.printf("%-15s%10d%10.2f\n", "Dinamico", m, tempo);
 	}
 
-	static void imprimeVetor (int[] A) {
-		for (int i = 0; i < A.length; i++) {
-			System.out.printf("%6d", A[i]);
-		}
-		System.out.print("\n\n\n");
-	}
-
-	static void imprimeHeap (int[] A) {
-		int h = (int) (Math.log(A.length) / Math.log(2));
-		int espacos = calculaEspacos(h);
-		for (int i = 0; i <= h; i++) {
-			for (int j = 1; j <= Math.pow(2, i); j++) {
-				if ((int) (Math.pow(2, i)) - 1 + (j-1) >= A.length) break;
-				imprimeEspacos(espacos);
-				System.out.printf("%3d", A[(int) (Math.pow(2, i)) - 1 + (j-1)]);
-				imprimeEspacos(espacos);
-				if (j < Math.pow(2, i)) {
-					System.out.printf("%3s", "");
+	static int recursivo(int[] p, int i, int j) {
+		if (i == j) {
+			queb[i][j] = i;
+			return 0;
+		} else {
+			int s = 0;
+			int qMin = Integer.MAX_VALUE;
+			for (int k = i; k < j; k++) {
+				int q = recursivo(p, i, k) + recursivo(p, k+1, j) + p[i-1] * p[k] * p[j];
+				if (q < qMin) {
+					qMin = q;
+					s = k;
 				}
 			}
-			espacos = (espacos - 3) / 2;
-			System.out.println();
+			queb[i][j] = s;
+			return qMin;
 		}
 	}
 
-	static int calculaEspacos (int h) {
-		int espacos = 3;
-		for (int i = 1; i <= h; i++) {
-			espacos = 2 * espacos + 3;
+	static int memoization(int[] p, int i, int j) {
+		if (i == j) {
+			queb[i][j] = i;
+			return 0;
+		} else {
+			int s = 0;
+			int qMin = Integer.MAX_VALUE;
+			for (int k = i; k < j; k++) {
+				int q = memoization(p, i, k) + memoization(p, k+1, j) + p[i-1] * p[k] * p[j];
+				if (q < qMin) {
+					qMin = q;
+					s = k;
+				}
+			}
+			queb[i][j] = s;
+			return qMin;
 		}
-		return espacos;
 	}
 
-	static void imprimeEspacos (int n) {
-		for (int i = 1; i <= n; i++) {
-			System.out.print(" ");
+	static int dinamico(int[] p) {
+		int n = p.length-1;
+		int m[][] = new int[n+1][n+1];
+		int s[][] = new int[n+1][n+1];
+		for (int l = 2; l <= n; l++) {
+			for (int i = 1; i <= n - l + 1; i++) {
+				int j = i + l - 1;
+				m[i][j] = Integer.MAX_VALUE;
+				for (int k = i; k < j; k++) {
+					//to do
+				}
+			}
+		}
+		imprime(s, 1, n);
+		return m[1][n];
+	}
+
+	static void imprime(int[][]s, int i, int j) {
+		if (i == j) {
+			System.out.print("A" + i);
+		} else {
+			System.out.print("(");
+			imprime(s, i, s[i][j]);
+			imprime(s, s[i][j]+1, j);
+			System.out.print(")");
 		}
 	}
 
 }
-
 ```
 
-**Passo 2:** Execute o código e escreva a saída do programa aqui. O vetor A é um heap máximo? Justifique sua resposta. (5%)
+**Passo 2:** Considere o problema da parentização de uma cadeia de multiplicação de matrizes, onde o vetor p expressa as dimensões das matrizes. Seja m[i,j] a quantidade de multiplicações escalares da parentização ótima da cadeia de matrizes Ai..j. Sua definição recursiva é dada abaixo:
 
-> Saída:
+- fórmula
 
-```
+a) Por que m[i, j] = 0 se i = j? (5%)
+b) O que representa cada valor de k ? (5%)
+c) O que representa cada um dos 3 termos da expressãofórmula? (10%)
+d) Qual o cálculo para o valor de m[i, i+1] ? (10%)
+e) Por que a abordagem de divisão e conquista não se mostra adequada para este problema? (5%)
+f) Para o vetor p = [3, 1, 2, 3, 4], quantas são as matrizes e quais são suas dimensões? (5%)
+g) Quais são todas as possíveis parentizações para este exemplo? Dica: são cinco. (5%)
 
-Vetor A:
-    86    78    36    61    67    34    58    42    35    59    62    28    60    37    12
+**Passo 3:** Considerando a implementação recursiva dada na função memoization, adicione as instruções para efetivamente realizar memoization. (15%)
 
+**Passo 4:** Considerando a implementação da função dinamico, adicione as instruções para o preenchimento das matrizes m e s. (15%)
 
-Heap A:
-                                              86
-                      78                                              36
-          61                      67                      34                      58
-    42          35          59          62          28          60          37          12
+**Passo 5:** Qual a equação de recorrência para o melhor caso do método imprime? Qual a sua complexidade? (10%)
 
-```
+**Passo 6:** Qual a equação de recorrência para o pior caso do método imprime? Qual a sua complexidade? (10%)
 
-**Passo 3:** Implemente as funções left e right que retornam, respectivamente, o índice do filho da esquerda e o índice do filho da direita de um nó de índice i. Imprima os elementos A[left(2)] e A[right(4)]. (10%)
-
-> Saída:
-
-```
-Left A(2):
-34
-Right A(4):
-62
-```
-
-**Passo 4:** Implemente a função maxheapfy. (15%)
-
-```java
-static void maxheapfy (int[] V, int i) {
-  int l = left(i);
-  int r = right(i);
-  int maior = i;
-
-  if (l <= V.length && V[l] > V[i]) {
-      maior = l;
-  } else {
-      maior = i;
-  }
-
-  if (r <= V.length && V[r] > V[maior]) {
-      maior = r;
-  }
-
-  if (maior != i) {
-      int trocar = V[i];
-      V[i] = V[maior];
-      V[maior] = trocar;
-      maxheapfy(V, maior);
-  }
-}
-```
-
-**Passo 5:** Antes de imprimir o vetor, aplique o procedimento maxheapfy ao índice 0 do vetor A e escreva a saída do programa aqui. Houve modificação no vetor A? Por que isso aconteceu? (10%)
-
-```
-Aplicando MaxHeapFy na raiz do vetor:
-                                              86
-                      78                                              36
-          61                      67                      34                      58
-    42          35          59          62          28          60          37          12
-```
-
-Não houve mudança no vetor pois a raiz e seu nos filhos ja corespondiam ao requisito de heap máximo ou seja:
-O maior elemento em um heap máximo e armazenado na raiz, e a subárvore desse nó contém valore menores que o do nó em questão.
-
-**Passo 6:** Antes de imprimir o vetor, aplique o procedimento maxheapfy ao índice 2 do vetor A e escreva a saída do programa aqui. O vetor A passou a ser um heap máximo? Por que isso aconteceu? (10%)
-
-```
-Aplicando MaxHeapFy no indice 2 do vetor:
-                                              86
-                      78                                              58
-          61                      67                      34                      36
-    42          35          59          62          28          60          37          12
-```
-
-Não, pois as subárvore formado apartir do indice `A[5]` não é um heap máximo.
-
-**Passo 7:** Antes de imprimir o vetor, aplique o procedimento maxheapfy ao índice 2 do vetor A e, em seguida, ao índice 5. O vetor A passou a ser um heap máximo? Por que isso aconteceu? (10%)
-
-```
-Aplicando MaxHeapFy no indice 2 e no indice 5 do vetor:
-                                              86
-                      78                                              58
-          61                      67                      60                      36
-    42          35          59          62          28          34          37          12
-```
-
-Não, pois a ordem aplicada no aranjo deixo a subárvore de indice `A[2]` em não conformidade com a regra de heap-máximo. Ou seja a subárvore formada apartir do indice `A[2]` tem sua raiz um indice menor que uma de suas folhas.
-
-**Passo 8:** Antes de imprimir o vetor, aplique o procedimento maxheapfy ao índice 5 do vetor A e, em seguida, ao índice 2. O vetor A passou a ser um heap máximo? Por que isso aconteceu? (10%)
-
-```
-Aplicando MaxHeapFy no indice 5 e no indice 2 do vetor:
-                                              86
-                      78                                              60
-          61                      67                      58                      36
-    42          35          59          62          28          34          37          12
-```
-
-Sim, pois satisfaz a regra de heap máximo, onde toda nó pai é maior que os nós filhos
-
-`A[Parent(i) >= A[i]`
-
-**Passo 9:** Crie um vetor B aleatório, imprima cada um de seus elementos e sua representação em heap (Obs.: código comentado no método main). O vetor B é um heap máximo? (10%)
-
-```
-Vetor B:
-    79    40     9    81    60   119   113    75    14   113    19    63    78     1    97
-
-
-                                              79
-                      40                                               9
-          81                      60                     119                     113
-    75          14         113          19          63          78           1          97
-```
-
-Não.
-
-**Passo 10:** Implemente o procedimento buildmaxheap que, dado um vetor qualquer, reorganiza os elementos do vetor para que ele possua a propriedade de maxheap. Apresente seu código aqui. (15%)
-
-```java
-1. static void buildmaxheap (int[] V) {
-2.    for (int i = V.length / 2; i >= 1; i--) {
-3.      maxheapfy(V, i - 1);
-4.    }
-5. }
-```
-
-**Passo 11:** Crie um vetor B aleatório, aplique o procedimento buildmaxheap, imprima cada um de seus elementos e sua representação em heap. O vetor B é um heap máximo? (5%)
-
-```
-Aplicando o procedimento de buildMaxHeap no vetor B:
-                                             145
-                     125                                             133
-          92                     119                     129                      85
-    89          30         104          75          89          79          84          35
-```
-
-Sim o vetor é uma heap máximo, `A[Parent(i) >= A[i]` todo nó pai e maior ou igual ao seus nós filhos.
+**Passo 7:** O que acontece com a execução do programa caso o vetor p seja mudado conforme comentário no código? Explique porque o programa se comporta desta maneira. (5%)
