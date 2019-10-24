@@ -140,6 +140,7 @@ public class Exercicio1 {
 - fórmula
 
 a) Por que m[i, j] = 0 se i = j? (5%)
+Pois não ha matrizes para resolver
 b) O que representa cada valor de k ? (5%)
 c) O que representa cada um dos 3 termos da expressãofórmula? (10%)
 d) Qual o cálculo para o valor de m[i, i+1] ? (10%)
