@@ -137,23 +137,123 @@ public class Exercicio1 {
 
 **Passo 2:** Considere o problema da parentização de uma cadeia de multiplicação de matrizes, onde o vetor p expressa as dimensões das matrizes. Seja m[i,j] a quantidade de multiplicações escalares da parentização ótima da cadeia de matrizes Ai..j. Sua definição recursiva é dada abaixo:
 
-- fórmula
+$m[i,j] =
+  \begin{cases}
+    0 & \quad \text{se i=j} \\
+    min = \{ m[i,j] + m[k+1,j] + p_{i-1} \ P_k \ P_j\} & \quad se \text{i != j} \\
+    \tiny { \ 0 < i < m}
+  \end{cases}$
 
 a) Por que m[i, j] = 0 se i = j? (5%)
-Pois não ha matrizes para resolver
+Pois o problema e trivial, a cadeia de consiste em apenas uma matriz, de modo que nenhuma multiplicação e necessária.
+
 b) O que representa cada valor de k ? (5%)
-c) O que representa cada um dos 3 termos da expressãofórmula? (10%)
+O valor da solução otima para a parentização, ou ponto de quebra.
+
+c) O que representa cada um dos 3 termos da expressão $m[i,k] + m[k+1, j] + p_{i-1} \ p_k \ p_j$? (10%)
+É o cálculo da divisão ótima.
+A matrix $P_1$ representada por $m[i,k]$, de i ate o ponto de quebra k, $P_2$ do proximo valor de dimesão k+1 ate j, e a parte de calculo que é p, onde p representa o valor de indice da matriz $P_1$ multiplicado por $P_k$ o indice onde localiza o ponto de quebra, e $p_j$ onde a matriz no caso $P_2$ e o indice de colunas dessa matriz.
+
 d) Qual o cálculo para o valor de m[i, i+1] ? (10%)
+
 e) Por que a abordagem de divisão e conquista não se mostra adequada para este problema? (5%)
+Repetição de Subproblemas, ou seja ela calcula as matrizes mais de uma vez.
+
 f) Para o vetor p = [3, 1, 2, 3, 4], quantas são as matrizes e quais são suas dimensões? (5%)
+$P^1_{3x1}, P^2_{1x2}, P^3_{2x3}, P^4_{3x4}$
+
 g) Quais são todas as possíveis parentizações para este exemplo? Dica: são cinco. (5%)
+$(P_1(P_2(P_3P_4)))$
+$(P_1((P_2P_3)P_4))$
+$((P_1P_2)(P_3P_4))$
+$((P_1(P_2P_3))P_4)$
+$(((P_1P_2)P_3)P_4)$
 
 **Passo 3:** Considerando a implementação recursiva dada na função memoization, adicione as instruções para efetivamente realizar memoization. (15%)
 
+```Java
+static int memoization(int[] p, int i, int j) {
+  if (qtde[i][j] != Integer.MAX_VALUE) {
+      return qtde[i][j];
+  }
+  if (i == j) {
+      qtde[i][j] = 0;
+      queb[i][j] = i;
+      return 0;
+  } else {
+      int s = 0;
+      int qMin = Integer.MAX_VALUE;
+      for (int k = i; k < j; k++) {
+          int q = memoization(p, i, k) + memoization(p, k+1, j) + p[i-1] * p[k] * p[j];
+          if (q < qMin) {
+              qMin = q;
+              s = k;
+          }
+      }
+      queb[i][j] = s;
+      qtde[i][j] = qMin;
+      return qMin;
+  }
+}
+```
+
 **Passo 4:** Considerando a implementação da função dinamico, adicione as instruções para o preenchimento das matrizes m e s. (15%)
+
+```Java
+static int dinamico(int[] p) {
+  int n = p.length-1;
+  int m[][] = new int[n+1][n+1];
+  int s[][] = new int[n+1][n+1];
+  for (int l = 2; l <= n; l++) {
+      for (int i = 1; i <= n - l + 1; i++) {
+          int j = i + l - 1;
+          m[i][j] = Integer.MAX_VALUE;
+          for (int k = i; k < j; k++) {
+              //to do
+              int q = (m[i][k] + m[k+1][j]) + p[i-1] * p[k] * p[j];
+              if (q < m[i][j]) {
+                  m[i][j] = q;
+                  s[i][j] = k;
+              }
+          }
+      }
+  }
+  imprime(s, 1, n);
+  return m[1][n];
+}
+```
 
 **Passo 5:** Qual a equação de recorrência para o melhor caso do método imprime? Qual a sua complexidade? (10%)
 
+<!-- $ T(n) =
+  \begin{cases}
+    \Theta(1) & \quad \text{se i=j} \\
+    2T(n/2)+\Theta(n) & \quad \text{se != j} \\
+  \end{cases}
+$
+
+ou seja:
+$T(n) = $ -->
+
 **Passo 6:** Qual a equação de recorrência para o pior caso do método imprime? Qual a sua complexidade? (10%)
+
+$T(n) = \begin{cases}
+  \Theta(1) & \quad \text{se i=j} \\
+  2T(\frac{n}{2})+\Theta(n) & \quad \text{se != j} \\
+\end{cases}$
+
+ou seja a equação:
+$T(n) = 2T(n/2)+\Theta(n)$
+
+Complexidade:
+$T(n) = 2t(\frac{n}{2}) + \Theta(n)$
+
+$ {a = 2, b = 3, f(n) = n }$
+
+$n\log_b a = n \log_2 2 \Rightarrow n^1 = n$
+
+Solução caso 2:
+
+$f(n) = \Theta(n \lg n)$
 
 **Passo 7:** O que acontece com a execução do programa caso o vetor p seja mudado conforme comentário no código? Explique porque o programa se comporta desta maneira. (5%)
