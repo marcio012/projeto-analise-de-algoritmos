@@ -1,4 +1,4 @@
-## Explicação da Aula
+  ## Explicação da Aula
 ##### Quarta Feira 02/09/2019
 
 ### Crescimento da complexidade
