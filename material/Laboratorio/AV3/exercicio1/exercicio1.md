@@ -85,7 +85,7 @@ public class Exercicio1 {
 **Obs.1:** A indexação em Java do vetor onde os registros são copiados vai de 0 até n-1.
 **Obs.2:** Este passo deve ser realizado obrigatoriamente no laboratório.
 
-```java
+```Java
 static Aluno[] ordenaCreditos (Aluno[] A) {
   // to do
   // credito maximo 200
@@ -113,92 +113,96 @@ static Aluno[] ordenaCreditos (Aluno[] A) {
   return B;
 }
 ```
+
+#####Output:
+
+
 ```
-7865236742     Jmzvcawopv              2
-4629189891     Ynlmtqxvap              3
-8482848870     Rapxrjwrlh            137
-2364939529     Amgswdpvkw            173
-9302649241     Izdigcqzdt             43
-5710322292     Cjzmlxiyvj             74
-2644627614     Kaykogxkgl            117
-9605879249     Eaqfjqwujs             27
-5609233811     Vktxtlwkrw            167
-3967791993     Oypqogbeam             71
-7596302139     Lwbvbphcvc            106
-8826651988     Pjpujvtcoq            138
-0170416276     Eorvzpwrom            191
-0113015799     Rjrrlzapog            113
-5262930864     Suxvgrevre            118
-5276016781     Mezdynpxoh            173
-3825606830     Owgukrbabh            114
-0642762917     Fahfbofwmq             30
-3892474930     Ekfntricsq             13
-0405040398     Bhegegodgn             55
-9535124566     Hobilmnkrb            194
-6393929397     Ndksmomeql            197
-5993437661     Lwfjbiwqjb             13
-0696608169     Dxifvrttut            121
-2228300160     Hyoecwlslj             56
-7502983726     Ghfgbfwnoz             41
-6251162882     Fzznmzdpby            111
-0690156889     Vxvurxuzlg             45
-5259141009     Anqihljbwu            150
-6145121570     Dutqugkyby            142
-6143551923     Amnlcujblj            103
-5245200918     Leamyckmbo              0
-0189596765     Vqwnhmnwvg             42
-5326951172     Dsbrkfancs             75
-8477757731     Upwhlzpefk            114
-1408021367     Kpdghvqsuc             22
-4371083543     Irgmtdolwm            172
-5711021131     Gkcpholamx            139
-3681005273     Ezorkcenwe             15
-7159957719     Ohnovvvnvl             12
+9549494176     Afszrcihal            148
+1751687351     Cznwtczvhv            192
+1886170853     Biltaqyrtd             53
+4963805484     Rzywpwcskt             80
+4500027537     Jyvroslajm             44
+8755871334     Oabgxbuesr             39
+9771690372     Mdbqtawffx            115
+1890891988     Hvnsumncnu             49
+1210292163     Hrvindtses             28
+4680460084     Rzblqmysxq             10
+7498724333     Jebbsncbgd            116
+4431367405     Reyjmhplmr            163
+6395976091     Bguloqfehj            132
+7882413749     Mcyxaooqee             43
+9624572006     Nufbkyctga            154
+3435315425     Imqsmpfvzz            104
+1220805867     Xcuxkdiqnq             41
+6737551247     Uujhhigbrm            111
+5155434092     Krbxfsjfnm            106
+4111951831     Fdiawivgca             71
+1417866290     Ayvujdwbuz             69
+7941439894     Kllefpajyx            148
+0619497603     Mnyovtbqsp             33
+4613181918     Axrntgjysj            173
+3745651808     Egwkfpaddl            160
+7218388681     Prjirkcrja             56
+7741788432     Knizscsrxp            160
+1154859115     Swpawebwru              8
+5583535540     Jzyivcmlby             62
+0839089325     Ptuunurobm             87
+7082241662     Enrsctxycj            121
+1456769485     Wwyuckmpov             73
+0304433912     Janqaqdguw             87
+3929530289     Pmnoztjigk            146
+0026325265     Jalriqjqbt             10
+4794961948     Liveurpvjh            102
+6722266306     Bcxhcmnzxl            138
+4673205049     Rvfvaashil             82
+4010591382     Hswgbpklkd             49
+4779996982     Wftzooyftr            185
 
 
 
-5245200918     Leamyckmbo              0
-7865236742     Jmzvcawopv              2
-4629189891     Ynlmtqxvap              3
-7159957719     Ohnovvvnvl             12
-3892474930     Ekfntricsq             13
-5993437661     Lwfjbiwqjb             13
-3681005273     Ezorkcenwe             15
-1408021367     Kpdghvqsuc             22
-9605879249     Eaqfjqwujs             27
-0642762917     Fahfbofwmq             30
-7502983726     Ghfgbfwnoz             41
-0189596765     Vqwnhmnwvg             42
-9302649241     Izdigcqzdt             43
-0690156889     Vxvurxuzlg             45
-0405040398     Bhegegodgn             55
-2228300160     Hyoecwlslj             56
-3967791993     Oypqogbeam             71
-5710322292     Cjzmlxiyvj             74
-5326951172     Dsbrkfancs             75
-6143551923     Amnlcujblj            103
-7596302139     Lwbvbphcvc            106
-6251162882     Fzznmzdpby            111
-0113015799     Rjrrlzapog            113
-3825606830     Owgukrbabh            114
-8477757731     Upwhlzpefk            114
-2644627614     Kaykogxkgl            117
-5262930864     Suxvgrevre            118
-0696608169     Dxifvrttut            121
-8482848870     Rapxrjwrlh            137
-8826651988     Pjpujvtcoq            138
-5711021131     Gkcpholamx            139
-6145121570     Dutqugkyby            142
-5259141009     Anqihljbwu            150
-5609233811     Vktxtlwkrw            167
-4371083543     Irgmtdolwm            172
-2364939529     Amgswdpvkw            173
-5276016781     Mezdynpxoh            173
-0170416276     Eorvzpwrom            191
-9535124566     Hobilmnkrb            194
-6393929397     Ndksmomeql            197
+1154859115     Swpawebwru              8
+4680460084     Rzblqmysxq             10
+0026325265     Jalriqjqbt             10
+1210292163     Hrvindtses             28
+0619497603     Mnyovtbqsp             33
+8755871334     Oabgxbuesr             39
+1220805867     Xcuxkdiqnq             41
+7882413749     Mcyxaooqee             43
+4500027537     Jyvroslajm             44
+1890891988     Hvnsumncnu             49
+4010591382     Hswgbpklkd             49
+1886170853     Biltaqyrtd             53
+7218388681     Prjirkcrja             56
+5583535540     Jzyivcmlby             62
+1417866290     Ayvujdwbuz             69
+4111951831     Fdiawivgca             71
+1456769485     Wwyuckmpov             73
+4963805484     Rzywpwcskt             80
+4673205049     Rvfvaashil             82
+0839089325     Ptuunurobm             87
+0304433912     Janqaqdguw             87
+4794961948     Liveurpvjh            102
+3435315425     Imqsmpfvzz            104
+5155434092     Krbxfsjfnm            106
+6737551247     Uujhhigbrm            111
+9771690372     Mdbqtawffx            115
+7498724333     Jebbsncbgd            116
+7082241662     Enrsctxycj            121
+6395976091     Bguloqfehj            132
+6722266306     Bcxhcmnzxl            138
+3929530289     Pmnoztjigk            146
+9549494176     Afszrcihal            148
+7941439894     Kllefpajyx            148
+9624572006     Nufbkyctga            154
+3745651808     Egwkfpaddl            160
+7741788432     Knizscsrxp            160
+4431367405     Reyjmhplmr            163
+4613181918     Axrntgjysj            173
+4779996982     Wftzooyftr            185
+1751687351     Cznwtczvhv            192
+
 ```
-
 
 **Passo 3:** Faça uma implementação do radix sort para ordenar os registros do vetor pelo campo matricula, sabendo que uma matrícula possui 10 dígitos decimais. Escreva a saída do seu programa antes e após a ordenação do vetor. (30%)
 
@@ -207,6 +211,126 @@ static Aluno[] ordenaCreditos (Aluno[] A) {
 
 ```java
 int digito = (int) A[j].matricula.charAt(d) – '0';
+```
+
+```Java
+static Aluno[] ordenaMatricula (Aluno[] A) {
+  // to do
+  int tamanhoMatricula = 10;
+  for (int d = tamanhoMatricula -1; d >= 0; d--) {
+      Aluno[] B = new Aluno[A.length];
+      int[] C = new int[10];
+
+
+      for (int j = 0; j < A.length; j++){
+          int digito = (int) A[j].matricula.charAt(d) - '0';
+          C[digito] += 1;
+      }
+
+      for (int i = 1; i < C.length; i++)
+          C[i] = C[i] + C[i - 1];
+
+      for (int j = A.length - 1; j >= 0; j--) {
+          Aluno aluno = A[j];
+          int digito = (int) A[j].matricula.charAt(d) - '0';
+          int posicao = C[digito] - 1;
+
+          B[posicao] = aluno;
+          C[digito] = C[digito] - 1;
+      }
+      A = B;
+  }
+  return A;
+
+}
+```
+
+
+#####Output:
+```
+2289742058     Jqknhnsmvr            165
+6464507715     Hbpsgzzila            176
+8654810967     Ehfcoyznta              3
+5523178452     Xcjasvjxjg             16
+9968920075     Efuybmkfos             58
+9414828129     Lmdsyhtklq            195
+2774579365     Vylenwikpq            127
+1870448120     Fkjvybekjp             81
+5867798937     Zahnzoxduh            148
+4238087347     Bueomzmqeu            178
+0652340859     Gnhckqjixm            170
+4625451688     Khtasedvzt            182
+1870907251     Ijpuoblubc             62
+4722553305     Wcotsebnur             36
+8558508395     Wyvtrcyxny             52
+3260754555     Raxxkrlccw            120
+2282243388     Kcamnegusd            100
+5996061386     Bwyveogzzh            167
+5445351418     Rwbhkryazd            149
+1053540106     Tpudmdwkah            165
+9288531308     Oiuimsnjqz              9
+3206128581     Qtzhooapcf             17
+7253946000     Mbjkcuuehu            151
+2944726892     Vstruqgqzj            189
+7386567607     Wdqyeidtgf            166
+6995420829     Fkrdhcykjz            148
+9092833953     Kyspnpgheh            107
+8100500147     Quqztoonst            140
+9352372944     Rbdlmkcend             41
+1857873667     Ozqkteoxmb             87
+6154211331     Aumponfjpc             22
+1529318509     Dqnzmodriw             76
+4570859621     Kesvymkeeh            197
+5377518511     Fczhelqfts            192
+4174722369     Nsfdbvokne              0
+7291804509     Dvkgnxnevn              0
+5248602176     Fbfdozndcq             48
+1164976600     Lxxrogsxkl             92
+1368557327     Tmsxvjfpti            183
+2149201277     Rmlzvzqjsi             59
+
+
+
+0652340859     Gnhckqjixm            170
+1053540106     Tpudmdwkah            165
+1164976600     Lxxrogsxkl             92
+1368557327     Tmsxvjfpti            183
+1529318509     Dqnzmodriw             76
+1857873667     Ozqkteoxmb             87
+1870448120     Fkjvybekjp             81
+1870907251     Ijpuoblubc             62
+2149201277     Rmlzvzqjsi             59
+2282243388     Kcamnegusd            100
+2289742058     Jqknhnsmvr            165
+2774579365     Vylenwikpq            127
+2944726892     Vstruqgqzj            189
+3206128581     Qtzhooapcf             17
+3260754555     Raxxkrlccw            120
+4174722369     Nsfdbvokne              0
+4238087347     Bueomzmqeu            178
+4570859621     Kesvymkeeh            197
+4625451688     Khtasedvzt            182
+4722553305     Wcotsebnur             36
+5248602176     Fbfdozndcq             48
+5377518511     Fczhelqfts            192
+5445351418     Rwbhkryazd            149
+5523178452     Xcjasvjxjg             16
+5867798937     Zahnzoxduh            148
+5996061386     Bwyveogzzh            167
+6154211331     Aumponfjpc             22
+6464507715     Hbpsgzzila            176
+6995420829     Fkrdhcykjz            148
+7253946000     Mbjkcuuehu            151
+7291804509     Dvkgnxnevn              0
+7386567607     Wdqyeidtgf            166
+8100500147     Quqztoonst            140
+8558508395     Wyvtrcyxny             52
+8654810967     Ehfcoyznta              3
+9092833953     Kyspnpgheh            107
+9288531308     Oiuimsnjqz              9
+9352372944     Rbdlmkcend             41
+9414828129     Lmdsyhtklq            195
+9968920075     Efuybmkfos             58
 ```
 
 **Passo 4:** Faça uma implementação do radix sort para ordenar os registros do vetor pelo campo nome, assumindo que todo nome começa com um caractere maiúsculo (‘A’...‘Z’) seguido de 9 caracteres minúsculos (‘a’...‘z’). Escreva a saída do seu programa antes e após a ordenação do vetor. (30%)
@@ -223,3 +347,123 @@ ou
 int digito = (int) A[j].nome.charAt(d) – 'a';
 ```
 de acordo com o caso
+
+```Java
+static Aluno[] ordenaNome (Aluno[] A) {
+	// to do
+	int tamanhoDonome = 10;
+
+	for (int d = tamanhoDonome -1; d >= 0; d--) {
+			Aluno[] B = new Aluno[A.length];
+			int[] C = new int[26];
+
+			for (int j = 0; j < A.length; j++){
+					int digito = (int) A[j].nome.toLowerCase().charAt(d) - 'a';
+					C[digito] += 1;
+			}
+
+			for (int i = 1; i < C.length; i++)
+					C[i] = C[i] + C[i - 1];
+
+			for (int j = A.length - 1; j >= 0; j--) {
+					Aluno aluno = A[j];
+					int digito = (int) A[j].nome.toLowerCase().charAt(d) - 'a';
+					int posicao = C[digito] - 1;
+
+					B[posicao] = aluno;
+					C[digito] = C[digito] - 1;
+			}
+			A = B;
+	}
+	return A;
+}
+```
+
+#####Output:
+
+```
+6213687605     Dmirnnpofph            53
+4003033140     Aaftjqsgmkr             8
+0935198920     Uwmmuosdizd            18
+4449175140     Nijbyjvcrnm           137
+9348554526     Tqptmkucnau           152
+6072552526     Pdrlvibqqgw           119
+8991116405     Ymjupxadrhn           131
+7175733886     Ensezsmmpgn           147
+1599433888     Weqfteultno           156
+0771390152     Lfetjcdktbe           169
+0417945637     Vhxdzovhhhn            87
+0481965600     Odjqesfytpc           138
+7004104960     Iscdrvvasfz           124
+2562606584     Kwyvfbaozan            32
+8339583151     Nmcfskzdqne            14
+5621857628     Kneboclfafr            50
+9085203604     Ynvdragwzod            31
+0281825842     Oefoktibxor            62
+5308499208     Zhettrymzgb           124
+8690806664     Fmtodacsvwz            31
+6608706898     Clgfkjagfpd            72
+8408034286     Wusgvmjamzn           118
+3769710221     Ypyqhyttwps            43
+8175620182     Yksvimnwvzm            81
+5160964150     Txuloannqmv           101
+6294759783     Qdpgsifisla           103
+5962672902     Cxkloybdsgj            49
+4974053255     Vyyhhpgueay            12
+7494662005     Vkioopdvgdo            59
+9647030758     Ujyoxrpagdw           125
+4882588232     Fwiqosgeqzy           151
+9413488976     Owpdectstgs           199
+9936230319     Arpmpnybtxm           101
+6166017207     Ijmjjzhpygu           137
+6403604219     Xmygyxxplzk           129
+8706053949     Rdjvjmkmidj            56
+0907637186     Lelhfpdhdhw           126
+3367657530     Desaekfyexy            32
+9928275071     Lynzrnexcby           105
+0655331981     Potbhvsectz           116
+
+
+
+4003033140     Aaftjqsgmkr             8
+9936230319     Arpmpnybtxm           101
+6608706898     Clgfkjagfpd            72
+5962672902     Cxkloybdsgj            49
+3367657530     Desaekfyexy            32
+6213687605     Dmirnnpofph            53
+7175733886     Ensezsmmpgn           147
+8690806664     Fmtodacsvwz            31
+4882588232     Fwiqosgeqzy           151
+6166017207     Ijmjjzhpygu           137
+7004104960     Iscdrvvasfz           124
+5621857628     Kneboclfafr            50
+2562606584     Kwyvfbaozan            32
+0907637186     Lelhfpdhdhw           126
+0771390152     Lfetjcdktbe           169
+9928275071     Lynzrnexcby           105
+4449175140     Nijbyjvcrnm           137
+8339583151     Nmcfskzdqne            14
+0481965600     Odjqesfytpc           138
+0281825842     Oefoktibxor            62
+9413488976     Owpdectstgs           199
+6072552526     Pdrlvibqqgw           119
+0655331981     Potbhvsectz           116
+6294759783     Qdpgsifisla           103
+8706053949     Rdjvjmkmidj            56
+9348554526     Tqptmkucnau           152
+5160964150     Txuloannqmv           101
+9647030758     Ujyoxrpagdw           125
+0935198920     Uwmmuosdizd            18
+0417945637     Vhxdzovhhhn            87
+7494662005     Vkioopdvgdo            59
+4974053255     Vyyhhpgueay            12
+1599433888     Weqfteultno           156
+8408034286     Wusgvmjamzn           118
+6403604219     Xmygyxxplzk           129
+8175620182     Yksvimnwvzm            81
+8991116405     Ymjupxadrhn           131
+9085203604     Ynvdragwzod            31
+3769710221     Ypyqhyttwps            43
+5308499208     Zhettrymzgb           124
+
+```
