@@ -2,16 +2,16 @@
 
 ### Prof. Napoleão Nepomuceno
 
-#### AV2 - Lab04
+#### AV3 - Lab03
 
-##### Data do Laboratório: 23/10/2019
+##### Data do Laboratório: 27/10/2019
 
 ##### Márcio Heleno **Matrícula: 1814038**
 
 ---
 
 > Entrega do trabalho:
-> Data da Entrega: 27/11/2019 (enviar arquivo .odt)
+> Data da Entrega: 01/12/2019 (enviar arquivo .odt)
 
 ### Exercício 1 - Av3 - 2
 
@@ -124,11 +124,49 @@ Matriz de adjacências:
 ```
 <!-- Foto do Grafo aqui -->
 
+![Gráfigo](../AV3-lab02/img/Grafo.png "Gráfico")
+
 **Passo 3:** Faça uma implementação para a função viavel que, dado o grafo e uma solução candidata, determina se a solução representa um ciclo hamiltoniano para o grafo. Apresente seu algoritmo. Escreva a saída do seu programa. (35%) Obs.1: Este passo deve ser realizado obrigatoriamente no laboratório.
+
+```Java
+static boolean viavel(Grafo g, List<Integer> candidata) {
+  // todo - checar se todas as arestas da solucao candidata fazem parte do grafo
+
+  for (int i = 0; i < g.m.length - 1 ;  i++) {
+      if(g.m[candidata.get(i)][candidata.get(i+1)] == 0){
+          return false;
+      }
+  }
+
+  if(g.m[candidata.size()-1][candidata.get(0)] == 0){
+      return false;
+  }
+
+  return true;
+}
+```
 
 **Passo 4:** Realize a análise de complexidade da função viavel. (10%)
 Obs.1: Este passo deve ser realizado obrigatoriamente no laboratório.
 
+```java
+                                                                        custo       vezes
+static boolean viavel(Grafo g, List<Integer> candidata) {
+  for (int i = 0; i < g.m.length - 1 ;  i++) {                          ->c1       (n)
+      if(g.m[candidata.get(i)][candidata.get(i+1)] == 0){               ->c2       (n - 1)
+          return false;                                                 ->c3       (n - 1)
+      }
+  }
+  if(g.m[candidata.size()-1][candidata.get(0)] == 0){                   ->c4       (1)
+      return false;                                                     ->c5       (1)
+  }
+  return true;                                                          ->c6       (1)
+}
+```
+Somatorio de c1 + c2 + c3 + c4 + c5 + c6;
+
+$T(n) = c1 + c2(n-1) + c3(n-1) + c4(1) + c5(1) + c6(1)$
+$\Theta(n)$
 
 
 **Passo 5:** Faça uma implementação para a função hamiltoniano que, dado o grafo, determina se este possui um ciclo hamiltoniano. Apresente seu algoritmo. Escreva a saída do seu programa. (35%)
@@ -136,3 +174,5 @@ Dica: Gerar todas as permutações possíveis dos vértices e checar se alguma �
 
 **Passo 6:**
 O problema de determinar se um grafo possui um ciclo hamiltoniano pertence à classe NP? Justifique sua resposta. (10%)
+
+Sim, Pois trata de um problema de descisão, pela discurção do algoritmo ele pode ser facilmente convertido em um algoritmo de tempo polinominal.
